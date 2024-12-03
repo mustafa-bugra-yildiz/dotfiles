@@ -1,0 +1,2 @@
+brew "gh"
+cask "spotify"

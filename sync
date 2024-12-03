@@ -1,0 +1,22 @@
+#!/bin/sh
+
+main() {
+	source zshrc
+
+	ensure_brew
+	brew bundle --cleanup
+
+	symlink
+}
+
+ensure_brew() {
+	command -v brew >/dev/null || \
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+symlink() {
+	ln -f $(pwd)/zshrc     $HOME/.zshrc
+	ln -f $(pwd)/gitconfig $HOME/.gitconfig
+}
+
+main
