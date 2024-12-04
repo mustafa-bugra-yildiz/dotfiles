@@ -5,10 +5,13 @@ main() {
 
 	ensure_brew
 	brew bundle --cleanup
-
 	ensure_ohmyzsh
-
+	ensure_node_lts
 	symlink
+}
+
+ensure_node_lts() {
+	nvm install --lts
 }
 
 ensure_ohmyzsh() {

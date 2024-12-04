@@ -1,4 +1,4 @@
 brew "gh"
-brew "node"
+brew "nvm"
 cask "spotify"
 cask "visual-studio-code"
