@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 main() {
 	source zshrc
@@ -6,7 +6,14 @@ main() {
 	ensure_brew
 	brew bundle --cleanup
 
+	ensure_ohmyzsh
+
 	symlink
+}
+
+ensure_ohmyzsh() {
+	command -v omz >/dev/null || \
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 ensure_brew() {
