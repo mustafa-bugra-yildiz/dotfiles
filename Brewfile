@@ -1,4 +1,5 @@
 brew "gh"
 brew "nvm"
+cask "arc"
 cask "spotify"
 cask "visual-studio-code"
