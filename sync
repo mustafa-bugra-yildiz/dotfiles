@@ -7,26 +7,56 @@ main() {
 	brew bundle --cleanup
 	ensure_ohmyzsh
 	ensure_node_lts
+	ensure_haskell_tooling
 	symlink
 }
 
+ensure_haskell_tooling() {
+	ensure "Haskell Tooling"
+
+	ghcup install ghc
+	ghcup set ghc
+
+	ghcup install hls
+	ghcup set hls
+
+	ghcup install cabal
+	ghcup set cabal
+
+	ghcup install stack
+	ghcup set stack
+
+	cabal update
+}
+
 ensure_node_lts() {
+	ensure "Node LTS"
 	nvm install --lts
 }
 
 ensure_ohmyzsh() {
+	ensure "Oh-My-ZSH"
 	command -v omz >/dev/null || \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
 ensure_brew() {
+	ensure "Homebrew"
 	command -v brew >/dev/null || \
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 symlink() {
+	echo ""
+	echo ">>> Ensuring Symlinks."
+
 	ln -f $(pwd)/zshrc     $HOME/.zshrc
 	ln -f $(pwd)/gitconfig $HOME/.gitconfig
+}
+
+ensure() {
+	echo ""
+	echo ">>> Ensuring $1."
 }
 
 main

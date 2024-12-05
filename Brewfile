@@ -1,4 +1,5 @@
 brew "gh"
+brew "ghcup"
 brew "nvm"
 cask "arc"
 cask "spotify"
