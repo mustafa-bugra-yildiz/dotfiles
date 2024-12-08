@@ -8,7 +8,14 @@ main() {
 	ensure_ohmyzsh
 	ensure_node_lts
 	ensure_haskell_tooling
+	ensure_tms
 	symlink
+}
+
+ensure_tms() {
+	ensure "tmux-sessionizer"
+
+	tms config -p ~/Desktop
 }
 
 ensure_haskell_tooling() {
@@ -50,8 +57,14 @@ symlink() {
 	echo ""
 	echo ">>> Ensuring Symlinks."
 
-	ln -f $(pwd)/zshrc     $HOME/.zshrc
-	ln -f $(pwd)/gitconfig $HOME/.gitconfig
+	ln -f $(pwd)/zshrc          $HOME/.zshrc
+	ln -f $(pwd)/gitconfig      $HOME/.gitconfig
+	ln -f $(pwd)/tmux.conf      $HOME/.tmux.conf
+  ln -f $(pwd)/alacritty.toml $HOME/.alacritty.toml
+
+	mkdir -p $HOME/.config
+	[ ! -e $HOME/.bin ]         && ln -sf $(pwd)/bin $HOME/.bin
+	[ ! -e $HOME/.config/nvim ] && ln -sf $(pwd)/nvim $HOME/.config/nvim
 }
 
 ensure() {
