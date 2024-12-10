@@ -7,7 +7,7 @@ main() {
 	brew bundle --cleanup
 	ensure_ohmyzsh
 	ensure_node_lts
-	ensure_haskell_tooling
+	ensure_rust_tooling
 	ensure_tms
 	symlink
 }
@@ -18,22 +18,10 @@ ensure_tms() {
 	tms config -p ~/Desktop
 }
 
-ensure_haskell_tooling() {
-	ensure "Haskell Tooling"
-
-	ghcup install ghc
-	ghcup set ghc
-
-	ghcup install hls
-	ghcup set hls
-
-	ghcup install cabal
-	ghcup set cabal
-
-	ghcup install stack
-	ghcup set stack
-
-	cabal update
+ensure_rust_tooling() {
+	ensure "Rust Tooling"
+	rustup toolchain install stable
+	cargo install cargo-watch
 }
 
 ensure_node_lts() {
