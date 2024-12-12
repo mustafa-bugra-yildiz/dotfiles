@@ -12,4 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 RUST_TOOLING=$(dirname $(rustup which cargo))
 export PATH="$PATH:$RUST_TOOLING"
 
+export PATH="$PATH:$HOME/.bin"
+
 alias vi="nvim"
