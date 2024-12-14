@@ -10,6 +10,20 @@ main() {
 	ensure_rust_tooling
 	ensure_tms
 	symlink
+
+	helix_health
+}
+
+helix_health() {
+	ensure "Helix Health"
+
+	# Table Header
+	# Languages...
+	hx --health | grep \
+		-e '^Language.*LSP.*DAP.*Formatter.*Highlight.*Textobject.*Indent' \
+		-e '^typescript' \
+		-e '^rust' \
+		-e '^prisma'
 }
 
 ensure_tms() {
@@ -21,12 +35,14 @@ ensure_tms() {
 ensure_rust_tooling() {
 	ensure "Rust Tooling"
 	rustup toolchain install stable
+	rustup component add rust-analyzer
 	cargo install cargo-watch
 }
 
 ensure_node_lts() {
 	ensure "Node LTS"
 	nvm install --lts
+	npm install -g @prisma/language-server
 }
 
 ensure_ohmyzsh() {
@@ -51,8 +67,9 @@ symlink() {
   ln -f $(pwd)/alacritty.toml $HOME/.alacritty.toml
 
 	mkdir -p $HOME/.config
-	[ ! -e $HOME/.bin ]         && ln -sf $(pwd)/bin $HOME/.bin
-	[ ! -e $HOME/.config/nvim ] && ln -sf $(pwd)/nvim $HOME/.config/nvim
+	[ ! -e $HOME/.bin ]          && ln -sf $(pwd)/bin   $HOME/.bin
+	[ ! -e $HOME/.config/nvim ]  && ln -sf $(pwd)/nvim  $HOME/.config/nvim
+	[ ! -e $HOME/.config/helix ] && ln -sf $(pwd)/helix $HOME/.config/helix
 }
 
 ensure() {

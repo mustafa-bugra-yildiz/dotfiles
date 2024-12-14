@@ -1,0 +1,1 @@
+hx --health | grep -e '^Language.*LSP.*DAP.*Formatter.*Highlight.*Textobject.*Indent' -e '^typescript' -e '^rust' -e '^go' -e '^prisma'
