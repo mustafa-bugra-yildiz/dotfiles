@@ -1,0 +1,7 @@
+[user]
+name = "mustafa-bugra-yildiz"
+email = "mustafa.bugra.yildiz@icloud.com"
+
+[ui]
+default-command = "log"
+editor = "hx"

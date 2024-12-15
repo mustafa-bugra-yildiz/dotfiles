@@ -14,4 +14,4 @@ export PATH="$PATH:$RUST_TOOLING"
 
 export PATH="$PATH:$HOME/.bin"
 
-alias vi="nvim"
+export EDITOR="hx"

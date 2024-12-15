@@ -61,10 +61,11 @@ symlink() {
 	echo ""
 	echo ">>> Ensuring Symlinks."
 
-	ln -f $(pwd)/zshrc          $HOME/.zshrc
-	ln -f $(pwd)/gitconfig      $HOME/.gitconfig
-	ln -f $(pwd)/tmux.conf      $HOME/.tmux.conf
-  ln -f $(pwd)/alacritty.toml $HOME/.alacritty.toml
+	ln -sf $(pwd)/zshrc          $HOME/.zshrc
+	ln -sf $(pwd)/gitconfig      $HOME/.gitconfig
+	ln -sf $(pwd)/tmux.conf      $HOME/.tmux.conf
+  ln -sf $(pwd)/alacritty.toml $HOME/.alacritty.toml
+  ln -sf $(pwd)/jjconfig.toml  $HOME/.jjconfig.toml
 
 	mkdir -p $HOME/.config
 	[ ! -e $HOME/.bin ]          && ln -sf $(pwd)/bin   $HOME/.bin
