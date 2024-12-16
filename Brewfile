@@ -19,6 +19,7 @@ brew "rustup"
 brew "typescript-language-server"
 
 # Apps
+cask "ableton-live-suite"
 cask "arc"
 cask "spotify"
 cask "streamlabs"
