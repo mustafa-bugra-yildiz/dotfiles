@@ -21,6 +21,7 @@ helix_health() {
 	hx --health | grep \
 		-e '^Language.*LSP.*DAP.*Formatter.*Highlight.*Textobject.*Indent' \
 		-e '^typescript' \
+		-e '^zig' \
 		-e '^prisma'
 }
 

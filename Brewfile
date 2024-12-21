@@ -15,9 +15,11 @@ brew "scc"
 # Languages
 brew "nvm"
 brew "typst"
+brew "zig"
 
 # LSP
 brew "typescript-language-server"
+brew "zls"
 
 # Apps
 cask "ableton-live-suite"
