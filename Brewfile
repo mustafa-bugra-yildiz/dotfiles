@@ -3,6 +3,7 @@ brew "helix"
 brew "tmux"
 brew "tmux-sessionizer"
 cask "alacritty"
+cask "cursor"
 cask "font-jetbrains-mono-nerd-font"
 
 # CLI
@@ -13,7 +14,7 @@ brew "scc"
 
 # Languages
 brew "nvm"
-brew "rustup"
+brew "typst"
 
 # LSP
 brew "typescript-language-server"

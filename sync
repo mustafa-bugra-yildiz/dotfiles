@@ -7,7 +7,6 @@ main() {
 	brew bundle --cleanup
 	ensure_ohmyzsh
 	ensure_node_lts
-	ensure_rust_tooling
 	ensure_tms
 	symlink
 
@@ -22,7 +21,6 @@ helix_health() {
 	hx --health | grep \
 		-e '^Language.*LSP.*DAP.*Formatter.*Highlight.*Textobject.*Indent' \
 		-e '^typescript' \
-		-e '^rust' \
 		-e '^prisma'
 }
 
@@ -30,13 +28,6 @@ ensure_tms() {
 	ensure "tmux-sessionizer"
 
 	tms config -p ~/Desktop
-}
-
-ensure_rust_tooling() {
-	ensure "Rust Tooling"
-	rustup toolchain install stable
-	rustup component add rust-analyzer
-	cargo install cargo-watch
 }
 
 ensure_node_lts() {
