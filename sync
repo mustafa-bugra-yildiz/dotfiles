@@ -20,9 +20,10 @@ helix_health() {
 	# Languages...
 	hx --health | grep \
 		-e '^Language.*LSP.*DAP.*Formatter.*Highlight.*Textobject.*Indent' \
+		-e '^go' \
+		-e '^prisma' \
 		-e '^typescript' \
-		-e '^zig' \
-		-e '^prisma'
+		-e '^zig'
 }
 
 ensure_tms() {
