@@ -29,9 +29,6 @@
         # Necessary for using flakes on this system.
         nix.settings.experimental-features = "nix-command flakes";
 
-        # Enable alternative shell support in nix-darwin.
-        # programs.fish.enable = true;
-
         # Set Git commit hash for darwin-version.
         system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -48,9 +45,21 @@
         # Aliases
         environment.shellAliases = { vi = "nvim"; };
 
+        # Git config
+        environment.etc."gitconfig".text = ''
+          [user]
+          	name = mustafa-bugra-yildiz
+          	email = mustafa.bugra.yildiz@icloud.com
+          [core]
+          	editor = nvim
+          [push]
+          	autoSetupRemote = true
+        '';
+
         # Homebrew for casks
         homebrew = {
           enable = true;
+          onActivation.cleanup = "zap";
           casks = [ "ghostty" ];
         };
       };
