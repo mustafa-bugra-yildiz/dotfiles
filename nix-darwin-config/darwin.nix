@@ -1,9 +1,9 @@
-{ self, nix-darwin, home-manager, ... }:
+{ self, nix-darwin, home-manager, nixvim, ... }:
 let
   configuration = { pkgs, ... }: {
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
-    environment.systemPackages = [];
+    environment.systemPackages = [ ];
 
     # Necessary for using flakes on this system.
     nix.settings.experimental-features = "nix-command flakes";
@@ -25,20 +25,29 @@ let
     homebrew = {
       enable = true;
       onActivation.cleanup = "uninstall";
-      casks = [ "ghostty" ];
+      casks = [ "ghostty" "arc" ];
     };
   };
 in {
   "Mustafas-MacBook-Air" = nix-darwin.lib.darwinSystem {
     modules = [
+      # Configuration for macOS-system
       configuration
+
+      # Configuration for macOS-user
       home-manager.darwinModules.home-manager
       {
-        users.users.mby.home = "/Users/mby";
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.mby = import ./homeConfigurations.nix;
+
+        # My user
+        users.users.mby.home = "/Users/mby";
+        home-manager.users.mby = import ./mby.nix;
       }
+
+      # Configuration for neovim
+      nixvim.nixDarwinModules.nixvim
+      { programs.nixvim = import ./nixvim.nix; }
     ];
   };
 }

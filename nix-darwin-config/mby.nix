@@ -3,26 +3,18 @@
   home.homeDirectory = "/Users/mby";
   home.stateVersion = "24.11";
 
-  home.packages = with pkgs;
-    [
-      neovim
+  home.packages = with pkgs; [
+    # formatters
+    shfmt
+    nixfmt
 
-      # formatters
-      shfmt
-      nixfmt
+    # tools
+    fd
+  ];
 
-      # tools
-      fd
-    ];
-
-  home.shellAliases = {
-    vi = "nvim";
-  };
-
+  # Shell config
+  programs.zsh.enable = true;
   home.sessionVariables = { EDITOR = "nvim"; };
-
-  # programs.home-manager.enable = true;
-  # programs.zsh.enable = true;
 
   # Git config
   home.file.".gitconfig".text = ''
