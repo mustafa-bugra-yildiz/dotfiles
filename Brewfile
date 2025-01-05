@@ -3,7 +3,6 @@ brew "neovim"
 cask "zed"
 
 # languages
-brew "gleam"
 brew "go"
 
 # formatters
