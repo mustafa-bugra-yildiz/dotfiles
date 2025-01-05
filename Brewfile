@@ -6,6 +6,7 @@ cask "sublime-text"
 brew "go"
 
 # formatters
+brew "djlint"
 brew "shfmt"
 brew "stylua"
 
