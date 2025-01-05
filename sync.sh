@@ -9,6 +9,7 @@ set -e
 # configure git
 git config --global user.name "$USER_NAME"
 git config --global user.email "$USER_EMAIL"
+git config --global push.autoSetupRemote true
 
 # install package manager
 command -v brew >/dev/null ||
@@ -18,12 +19,15 @@ command -v brew >/dev/null || . rc.sh
 # install packages
 brew bundle
 
-# format files
-fd -e sh -x shfmt -w
-fd -e lua -x stylua
+# elixir/phoenix
+mix archive.install --force hex phx_new
 
 # symlink files
 mkdir -p $HOME/.config
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
 ln -sf $(pwd)/nvim $HOME/.config/nvim
 rm -f nvim/nvim
+
+# format files
+fd -e sh -x shfmt -w
+fd -e lua -x stylua
