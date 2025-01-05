@@ -4,9 +4,16 @@ EDITOR='nvim'
 
 # aliases
 alias vi="$EDITOR"
+alias g="git"
+alias gst="git status"
+alias gau="git add -u"
+alias gds="git diff --staged"
 
 # package manager
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# fuzzy finder
+command -v fzf >/dev/null && source <(fzf --zsh)
 
 # env
 export USER_NAME

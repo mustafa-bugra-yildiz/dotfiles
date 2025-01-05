@@ -1,7 +1,7 @@
 set -e
 
 # absorb env
-. rc.sh
+source rc.sh
 
 # create ssh keypair
 [ -f $HOME/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
@@ -14,13 +14,10 @@ git config --global push.autoSetupRemote true
 # install package manager
 command -v brew >/dev/null ||
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-command -v brew >/dev/null || . rc.sh
+command -v brew >/dev/null || source rc.sh
 
 # install packages
-brew bundle
-
-# elixir/phoenix
-mix archive.install --force hex phx_new
+brew bundle --cleanup --zap
 
 # symlink files
 mkdir -p $HOME/.config
