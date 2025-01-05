@@ -10,6 +10,10 @@ brew "stylua"
 
 # tools
 brew "fd"
+brew "ripgrep"
 
 # terminal
 cask "ghostty"
+
+# databases
+cask "postgres-unofficial"
