@@ -1,7 +1,6 @@
 return {
-	"loctvl842/monokai-pro.nvim",
+	"navarasu/onedark.nvim",
 	config = function()
-		require("monokai-pro").setup()
-		vim.cmd("colorscheme monokai-pro")
+		require("onedark").load()
 	end,
 }

@@ -1,6 +1,6 @@
 # text editors
 brew "neovim"
-cask "sublime-text"
+cask "zed"
 
 # languages
 brew "gleam"

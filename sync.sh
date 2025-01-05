@@ -17,13 +17,17 @@ command -v brew >/dev/null ||
 command -v brew >/dev/null || source rc.sh
 
 # install packages
-brew bundle --cleanup --zap
+brew bundle --cleanup
 
 # symlink files
-mkdir -p $HOME/.config
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
+
+mkdir -p $HOME/.config
 ln -sf $(pwd)/nvim $HOME/.config/nvim
 rm -f nvim/nvim
+
+mkdir -p $HOME/.config/zed
+ln -sf $(pwd)/zed-settings.json $HOME/.config/zed/settings.json
 
 # format files
 fd -e sh -x shfmt -w
