@@ -10,6 +10,7 @@ brew "shfmt"
 brew "stylua"
 
 # tools
+brew "entr"
 brew "fd"
 brew "fzf"
 brew "ripgrep"
