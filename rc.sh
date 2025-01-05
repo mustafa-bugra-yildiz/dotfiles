@@ -15,7 +15,11 @@ alias gds="git diff --staged"
 # fuzzy finder
 command -v fzf >/dev/null && source <(fzf --zsh)
 
+# go packages
+PATH="$PATH:$HOME/go/bin"
+
 # env
+export PATH
 export USER_NAME
 export USER_EMAIL
 export EDITOR
