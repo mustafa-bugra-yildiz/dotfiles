@@ -4,6 +4,7 @@ cask "zed"
 
 # languages
 brew "go"
+brew "rustup"
 
 # formatters
 brew "djlint"
@@ -14,6 +15,7 @@ brew "stylua"
 brew "entr"
 brew "fd"
 brew "fzf"
+brew "jq"
 brew "ripgrep"
 
 # terminal
@@ -23,4 +25,5 @@ cask "ghostty"
 cask "postgres-unofficial"
 
 # apps
+cask "mullvadvpn"
 cask "spotify"

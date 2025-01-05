@@ -18,6 +18,9 @@ command -v fzf >/dev/null && source <(fzf --zsh)
 # go packages
 PATH="$PATH:$HOME/go/bin"
 
+# rust packages
+PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
 # env
 export PATH
 export USER_NAME

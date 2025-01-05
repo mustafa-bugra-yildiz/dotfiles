@@ -19,6 +19,9 @@ command -v brew >/dev/null || source rc.sh
 # install packages
 brew bundle --cleanup
 
+# setup rust
+rustup toolchain install stable
+
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
 
