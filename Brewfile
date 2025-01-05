@@ -3,6 +3,7 @@ brew "neovim"
 cask "sublime-text"
 
 # languages
+brew "gleam"
 brew "go"
 
 # formatters
