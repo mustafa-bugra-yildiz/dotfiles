@@ -27,5 +27,6 @@ cask "ghostty"
 cask "postgres-unofficial"
 
 # apps
+cask "arc"
 cask "mullvadvpn"
 cask "spotify"
