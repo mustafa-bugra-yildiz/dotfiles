@@ -1,9 +1,10 @@
 # text editors
 brew "neovim"
-cask "zed"
+cask "cursor"
 
 # languages
 brew "go"
+brew "nvm"
 brew "rustup"
 
 # formatters
