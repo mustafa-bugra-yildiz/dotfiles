@@ -20,6 +20,7 @@ brew "jq"
 brew "ripgrep"
 
 # terminal
+brew "pure"
 cask "ghostty"
 
 # databases

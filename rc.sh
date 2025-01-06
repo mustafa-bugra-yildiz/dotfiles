@@ -35,6 +35,12 @@ else
 	echo "Warning: Homebrew not found"
 fi
 
+# Pure prompt setup
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit
+promptinit
+prompt pure
+
 # Fuzzy finder setup
 if command -v fzf >/dev/null; then
 	source <(fzf --zsh)
