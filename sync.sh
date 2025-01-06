@@ -1,8 +1,5 @@
 set -e
 
-# absorb env
-source rc.sh
-
 # create ssh keypair
 [ -f $HOME/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
 
@@ -19,8 +16,15 @@ command -v brew >/dev/null || source rc.sh
 # install packages
 brew bundle --cleanup
 
+# absorb env
+source rc.sh
+
 # setup rust
 rustup toolchain install stable
+
+# setup nodejs
+nvm install --lts
+nvm use --lts
 
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
