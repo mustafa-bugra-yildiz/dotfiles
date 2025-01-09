@@ -1,3 +1,6 @@
+# font
+cask "font-jetbrains-mono"
+
 # text editors
 brew "neovim"
 cask "cursor"

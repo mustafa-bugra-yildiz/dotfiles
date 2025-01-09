@@ -1,6 +1,7 @@
 return {
-	"navarasu/onedark.nvim",
+	"mustafa-bugra-yildiz/sehfan.nvim",
 	config = function()
-		require("onedark").load()
+		require('sehfan').setup()
+		-- vim.cmd.colorscheme "sehfan"
 	end,
 }
