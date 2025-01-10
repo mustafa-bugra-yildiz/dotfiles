@@ -32,4 +32,5 @@ cask "postgres-unofficial"
 # apps
 cask "arc"
 cask "mullvadvpn"
+cask "raycast"
 cask "spotify"
