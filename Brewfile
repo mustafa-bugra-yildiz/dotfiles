@@ -30,7 +30,7 @@ cask "ghostty"
 cask "postgres-unofficial"
 
 # apps
-cask "arc"
+cask "google-chrome"
 cask "mullvadvpn"
 cask "raycast"
 cask "spotify"
