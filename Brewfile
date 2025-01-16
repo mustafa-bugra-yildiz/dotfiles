@@ -29,5 +29,6 @@ cask "postgres-unofficial"
 # apps
 cask "chatgpt"
 cask "mullvadvpn"
+cask "notion"
 cask "raycast"
 cask "spotify"
