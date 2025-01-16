@@ -1,9 +1,6 @@
-# font
-cask "font-jetbrains-mono"
-
-# text editors
-brew "neovim"
+# code editor
 cask "cursor"
+cask "font-jetbrains-mono"
 
 # languages
 brew "go"
@@ -11,9 +8,9 @@ brew "nvm"
 brew "rustup"
 
 # formatters
-brew "djlint"
-brew "shfmt"
-brew "stylua"
+brew "djlint" # .gotmpl
+brew "shfmt" # .sh
+brew "stylua" # .lua
 
 # tools
 brew "entr"
@@ -30,7 +27,7 @@ cask "ghostty"
 cask "postgres-unofficial"
 
 # apps
-cask "google-chrome"
+cask "chatgpt"
 cask "mullvadvpn"
 cask "raycast"
 cask "spotify"
