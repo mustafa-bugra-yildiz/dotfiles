@@ -1,7 +1,7 @@
 # User configuration
 USER_NAME='mustafa-bugra-yildiz'
 USER_EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='nvim'
+EDITOR='vi'
 
 # Basic aliases
 alias vi="$EDITOR"

@@ -4,6 +4,7 @@ set -e
 [ -f $HOME/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
 
 # configure git
+git config --global core.editor "$EDITOR"
 git config --global user.name "$USER_NAME"
 git config --global user.email "$USER_EMAIL"
 git config --global push.autoSetupRemote true
@@ -32,9 +33,6 @@ ln -sf $(pwd)/rc.sh $HOME/.zshrc
 mkdir -p $HOME/.config
 ln -sf $(pwd)/nvim $HOME/.config/nvim
 rm -f nvim/nvim
-
-mkdir -p $HOME/.config/zed
-ln -sf $(pwd)/zed-settings.json $HOME/.config/zed/settings.json
 
 # format files
 fd -e sh -x shfmt -w
