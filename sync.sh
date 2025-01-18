@@ -35,5 +35,4 @@ ln -sf $(pwd)/nvim $HOME/.config/nvim
 rm -f nvim/nvim
 
 # format files
-fd -e sh -x shfmt -w
-fd -e lua -x stylua
+find . -ipath '*.sh' -exec shfmt -w '{}' \;

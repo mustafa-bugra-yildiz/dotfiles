@@ -3,19 +3,6 @@ USER_NAME='mustafa-bugra-yildiz'
 USER_EMAIL='mustafa.bugra.yildiz@icloud.com'
 EDITOR='vi'
 
-# Basic aliases
-alias vi="$EDITOR"
-
-# Git aliases
-alias g="git"
-alias gst="git status"
-alias gau="git add -u"
-alias gds="git diff --staged"
-alias gc="git commit"
-alias gp="git push"
-alias gl="git pull"
-alias gco="git checkout"
-
 # PATH management
 PATH_DIRS=(
 	"$HOME/go/bin"                 # Go packages
@@ -35,11 +22,8 @@ else
 	echo "Warning: Homebrew not found"
 fi
 
-# Pure prompt setup
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-autoload -U promptinit
-promptinit
-prompt pure
+# Prompt
+PS1='%1~: '
 
 # Fuzzy finder setup
 if command -v fzf >/dev/null; then
