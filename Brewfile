@@ -10,6 +10,7 @@ brew "shfmt" # .sh
 # tools
 brew "fzf"
 brew "jq"
+brew "scdoc"
 
 # terminal
 cask "ghostty"
