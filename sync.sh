@@ -27,6 +27,14 @@ rustup toolchain install stable
 nvm install --lts
 nvm use --lts
 
+# setup plan9port
+if [ ! -d plan9port ]; then
+	git clone https://github.com/9fans/plan9port
+	cd plan9port
+	./INSTALL
+	cd -
+fi
+
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
 

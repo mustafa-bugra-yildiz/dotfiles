@@ -3,10 +3,15 @@ USER_NAME='mustafa-bugra-yildiz'
 USER_EMAIL='mustafa.bugra.yildiz@icloud.com'
 EDITOR='vi'
 
+# Plan9
+PLAN9="$HOME/personal/dotfiles/plan9port"
+font="$PLAN9/font/fixed/unicode.6x12.font"
+
 # PATH management
 PATH_DIRS=(
-	"$HOME/go/bin"                 # Go packages
-	"/opt/homebrew/opt/rustup/bin" # Rust packages
+	"$HOME/go/bin"                 # Go binaries
+	"/opt/homebrew/opt/rustup/bin" # Rust binaries
+	"$PLAN9/bin"                   # Plan9 binaries
 )
 
 for dir in "${PATH_DIRS[@]}"; do
@@ -23,7 +28,7 @@ else
 fi
 
 # Prompt
-PS1='%1~: '
+PS1='> '
 
 # Fuzzy finder setup
 if command -v fzf >/dev/null; then
@@ -47,3 +52,4 @@ export USER_NAME
 export USER_EMAIL
 export EDITOR
 export NVM_DIR
+export PLAN9
