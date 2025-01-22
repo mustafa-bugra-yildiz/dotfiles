@@ -1,3 +1,6 @@
+# ide
+cask "cursor"
+
 # languages
 brew "go"
 brew "nvm"
