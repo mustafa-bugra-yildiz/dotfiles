@@ -1,46 +1,28 @@
 set -e
 
-# create ssh keypair
+# ssh keypair
 [ -f $HOME/.ssh/id_ed25519 ] || ssh-keygen -t ed25519
 
-# configure git
+# git config
 git config --global core.editor "$EDITOR"
-git config --global user.name "$USER_NAME"
-git config --global user.email "$USER_EMAIL"
+git config --global user.name "$NAME"
+git config --global user.email "$EMAIL"
 git config --global push.autoSetupRemote true
 
-# install package manager
+# homebrew
 command -v brew >/dev/null ||
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-command -v brew >/dev/null || source rc.sh
-
-# install packages
-brew bundle --cleanup
-
-# absorb env
 source rc.sh
 
-# setup rust
-rustup toolchain install stable
+# bun
+command -v bun >/dev/null || curl -fsSL https://bun.sh/install | bash
 
-# setup nodejs
-nvm install --lts
-nvm use --lts
-
-# setup plan9port
-if [ ! -d plan9port ]; then
-	git clone https://github.com/9fans/plan9port
-	cd plan9port
-	./INSTALL
-	cd -
-fi
+# packages and env
+brew bundle --cleanup
+source rc.sh
 
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
-
-mkdir -p $HOME/.config
-ln -sf $(pwd)/nvim $HOME/.config/nvim
-rm -f nvim/nvim
 
 # format files
 find . -ipath '*.sh' -exec shfmt -w '{}' \;

@@ -1,55 +1,35 @@
-# User configuration
-USER_NAME='mustafa-bugra-yildiz'
-USER_EMAIL='mustafa.bugra.yildiz@icloud.com'
+# user
+NAME='mustafa-bugra-yildiz'
+EMAIL='mustafa.bugra.yildiz@icloud.com'
 EDITOR='vi'
 
-# Plan9
-PLAN9="$HOME/personal/dotfiles/plan9port"
-font="$PLAN9/font/fixed/unicode.6x12.font"
+# bun
+BUN_INSTALL="$HOME/.bun"
 
-# PATH management
-PATH_DIRS=(
-	"$HOME/go/bin"                 # Go binaries
-	"/opt/homebrew/opt/rustup/bin" # Rust binaries
-	"$PLAN9/bin"                   # Plan9 binaries
+# path
+paths=(
+	"$HOME/go/bin"     # Go binaries
+	"$BUN_INSTALL/bin" # Bun binaries
 )
 
-for dir in "${PATH_DIRS[@]}"; do
-	if [ -d "$dir" ]; then
-		PATH="$PATH:$dir"
-	fi
+for dir in "${paths[@]}"; do
+	[ -d "$dir" ] && PATH="$PATH:$dir"
 done
 
-# Homebrew setup
-if [ -f /opt/homebrew/bin/brew ]; then
-	eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-	echo "Warning: Homebrew not found"
-fi
+# homebrew
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Prompt
-PS1='> '
+# prompt
+PS1='%1~: '
 
-# Fuzzy finder setup
-if command -v fzf >/dev/null; then
-	source <(fzf --zsh)
-else
-	echo "Warning: fzf not found"
-fi
+# fuzzy finder
+command -v fzf >/dev/null && source <(fzf --zsh)
 
-# NVM (Node Version Manager) setup
-NVM_DIR="$HOME/.nvm"
-if [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
-	source "/opt/homebrew/opt/nvm/nvm.sh"
-	source "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-else
-	echo "Warning: NVM not found"
-fi
+# bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
-# Exports
+# exports
 export PATH
-export USER_NAME
-export USER_EMAIL
+export NAME
+export EMAIL
 export EDITOR
-export NVM_DIR
-export PLAN9

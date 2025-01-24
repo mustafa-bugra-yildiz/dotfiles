@@ -3,8 +3,6 @@ cask "cursor"
 
 # languages
 brew "go"
-brew "nvm"
-brew "rustup"
 
 # formatters
 brew "djlint" # .gotmpl
@@ -24,3 +22,4 @@ cask "mullvadvpn"
 cask "notion"
 cask "raycast"
 cask "spotify"
+cask "zen-browser"
