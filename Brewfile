@@ -10,6 +10,7 @@ brew "shfmt" # .sh
 
 # tools
 brew "fzf"
+brew "httpie"
 brew "jq"
 brew "scdoc"
 

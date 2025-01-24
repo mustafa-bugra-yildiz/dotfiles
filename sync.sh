@@ -17,6 +17,10 @@ source rc.sh
 # bun
 command -v bun >/dev/null || curl -fsSL https://bun.sh/install | bash
 
+# js tools
+command -v concurrently >/dev/null || bun i -g concurrently
+command -v tailwindcss >/dev/null || bun i -g tailwindcss @tailwindcss/cli
+
 # packages and env
 brew bundle --cleanup
 source rc.sh
