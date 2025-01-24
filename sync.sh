@@ -17,9 +17,13 @@ source rc.sh
 # bun
 command -v bun >/dev/null || curl -fsSL https://bun.sh/install | bash
 
-# js tools
-command -v concurrently >/dev/null || bun i -g concurrently
-command -v tailwindcss >/dev/null || bun i -g tailwindcss @tailwindcss/cli
+# tailwind
+command -v tailwindcss >/dev/null || {
+	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
+	chmod +x tailwindcss-macos-arm64
+	mkdir -p ~/.bin
+	mv tailwindcss-macos-arm64 ~/.bin/tailwindcss
+}
 
 # packages and env
 brew bundle --cleanup

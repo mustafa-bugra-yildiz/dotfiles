@@ -8,6 +8,7 @@ BUN_INSTALL="$HOME/.bun"
 
 # path
 paths=(
+	"$HOME/.bin"       # custom binaries
 	"$HOME/go/bin"     # Go binaries
 	"$BUN_INSTALL/bin" # Bun binaries
 )
