@@ -9,6 +9,7 @@ brew "djlint" # .gotmpl
 brew "shfmt" # .sh
 
 # tools
+brew "entr"
 brew "fzf"
 brew "httpie"
 brew "jq"
