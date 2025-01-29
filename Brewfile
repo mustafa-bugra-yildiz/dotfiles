@@ -19,9 +19,9 @@ brew "scdoc"
 cask "ghostty"
 
 # apps
+cask "acreom"
 cask "chatgpt"
 cask "mullvadvpn"
-cask "notion"
 cask "raycast"
 cask "spotify"
 cask "zen-browser"
