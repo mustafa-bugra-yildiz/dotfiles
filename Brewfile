@@ -2,6 +2,7 @@
 cask "cursor"
 
 # languages
+brew "gleam"
 brew "go"
 
 # formatters
