@@ -14,20 +14,13 @@ command -v brew >/dev/null ||
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 source rc.sh
 
-# bun
-command -v bun >/dev/null || curl -fsSL https://bun.sh/install | bash
-
-# tailwind
-command -v tailwindcss >/dev/null || {
-	curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
-	chmod +x tailwindcss-macos-arm64
-	mkdir -p ~/.bin
-	mv tailwindcss-macos-arm64 ~/.bin/tailwindcss
-}
-
 # packages and env
 brew bundle --cleanup
 source rc.sh
+
+# nvm
+nvm install --lts
+nvm use --lts
 
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc

@@ -2,15 +2,16 @@
 cask "cursor"
 
 # languages
-brew "gleam"
 brew "go"
+brew "nvm"
 
 # formatters
-brew "djlint" # .gotmpl
 brew "shfmt" # .sh
 
+# package managers
+brew "pnpm"
+
 # tools
-brew "entr"
 brew "fzf"
 brew "httpie"
 brew "jq"

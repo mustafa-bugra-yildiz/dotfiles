@@ -3,14 +3,15 @@ NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
 EDITOR='vi'
 
-# bun
-BUN_INSTALL="$HOME/.bun"
+# nvm
+NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # path
 paths=(
-	"$HOME/.bin"       # custom binaries
-	"$HOME/go/bin"     # Go binaries
-	"$BUN_INSTALL/bin" # Bun binaries
+	"$HOME/.bin"   # custom binaries
+	"$HOME/go/bin" # Go binaries
 )
 
 for dir in "${paths[@]}"; do
@@ -26,11 +27,9 @@ PS1='%1~: '
 # fuzzy finder
 command -v fzf >/dev/null && source <(fzf --zsh)
 
-# bun completions
-[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
-
 # exports
 export PATH
 export NAME
 export EMAIL
 export EDITOR
+export NVM_DIR
