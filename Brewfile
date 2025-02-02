@@ -2,11 +2,13 @@
 cask "cursor"
 
 # languages
+brew "elm"
 brew "go"
 brew "nvm"
 
 # formatters
-brew "shfmt" # .sh
+brew "shfmt"      # .sh
+brew "elm-format" # .elm
 
 # package managers
 brew "pnpm"
