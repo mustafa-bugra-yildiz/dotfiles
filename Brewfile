@@ -14,6 +14,10 @@ brew "shfmt"      # .sh
 # package managers
 brew "pnpm"
 
+# build systems
+brew "premake"
+cask "docker"
+
 # tools
 brew "fzf"
 brew "httpie"
@@ -26,7 +30,6 @@ cask "ghostty"
 # apps
 cask "acreom"
 cask "chatgpt"
-cask "docker"
 cask "mullvadvpn"
 cask "raycast"
 cask "signal"
