@@ -19,8 +19,7 @@ brew bundle --cleanup
 source rc.sh
 
 # nvm
-nvm install --lts
-nvm use --lts
+fnm install --lts
 
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc

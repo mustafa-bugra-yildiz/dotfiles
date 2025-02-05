@@ -6,7 +6,7 @@ brew "flyctl"
 
 # languages
 brew "go"
-brew "nvm"
+brew "fnm"
 
 # formatters
 brew "shfmt"      # .sh
@@ -26,6 +26,7 @@ cask "ghostty"
 # apps
 cask "acreom"
 cask "chatgpt"
+cask "docker"
 cask "mullvadvpn"
 cask "raycast"
 cask "signal"
