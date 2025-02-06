@@ -23,6 +23,7 @@ fnm install --lts
 
 # symlink files
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
+ln -sf $(pwd)/aerospace.toml $HOME/.aerospace.toml
 
 # format files
 find . -ipath '*.sh' -exec shfmt -w '{}' \;

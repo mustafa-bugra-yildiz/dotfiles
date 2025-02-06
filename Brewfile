@@ -1,22 +1,17 @@
+tap "nikitabobko/tap"
+
 # ide
 cask "cursor"
-
-# platforms
-brew "flyctl"
 
 # languages
 brew "go"
 brew "fnm"
 
 # formatters
-brew "shfmt"      # .sh
+brew "shfmt" # .sh
 
 # package managers
 brew "pnpm"
-
-# build systems
-brew "premake"
-cask "docker"
 
 # tools
 brew "fzf"
@@ -28,9 +23,8 @@ brew "scdoc"
 cask "ghostty"
 
 # apps
-cask "acreom"
+cask "aerospace"
 cask "chatgpt"
 cask "mullvadvpn"
-cask "raycast"
 cask "signal"
 cask "spotify"
