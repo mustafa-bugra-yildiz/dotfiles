@@ -2,6 +2,7 @@ tap "nikitabobko/tap"
 tap "hashicorp/tap"
 
 # ide
+brew "neovim"
 cask "cursor"
 
 # languages
@@ -15,9 +16,12 @@ brew "shfmt" # .sh
 brew "pnpm"
 
 # tools
+brew "ast-grep"
+brew "fd"
 brew "fzf"
 brew "httpie"
 brew "jq"
+brew "ripgrep"
 brew "scdoc"
 brew "terraform"
 

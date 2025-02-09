@@ -25,5 +25,9 @@ fnm install --lts
 ln -sf $(pwd)/rc.sh $HOME/.zshrc
 ln -sf $(pwd)/aerospace.toml $HOME/.aerospace.toml
 
+mkdir -p ~/.config
+ln -sf $(pwd)/nvim $HOME/.config/nvim
+rm -f nvim/nvim
+
 # format files
 find . -ipath '*.sh' -exec shfmt -w '{}' \;

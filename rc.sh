@@ -1,7 +1,12 @@
 # user
 NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='vi'
+EDITOR='nvim'
+
+# editor
+if [ "$EDITOR" != vi ]; then
+	alias vi="$EDITOR"
+fi
 
 # path
 paths=(
