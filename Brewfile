@@ -1,4 +1,5 @@
 tap "nikitabobko/tap"
+tap "hashicorp/tap"
 
 # ide
 cask "cursor"
@@ -18,6 +19,7 @@ brew "fzf"
 brew "httpie"
 brew "jq"
 brew "scdoc"
+brew "terraform"
 
 # terminal
 cask "ghostty"
@@ -26,6 +28,5 @@ cask "ghostty"
 cask "aerospace"
 cask "chatgpt"
 cask "mullvadvpn"
-cask "pgadmin4"
 cask "signal"
 cask "spotify"
