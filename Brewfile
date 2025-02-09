@@ -17,6 +17,7 @@ brew "pnpm"
 
 # tools
 brew "ast-grep"
+brew "awscli"
 brew "fd"
 brew "fzf"
 brew "httpie"
