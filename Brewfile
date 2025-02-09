@@ -1,5 +1,5 @@
 tap "nikitabobko/tap"
-tap "hashicorp/tap"
+tap "pulumi/tap"
 
 # ide
 brew "neovim"
@@ -21,9 +21,9 @@ brew "fd"
 brew "fzf"
 brew "httpie"
 brew "jq"
+brew "pulumi"
 brew "ripgrep"
 brew "scdoc"
-brew "terraform"
 
 # terminal
 cask "ghostty"
