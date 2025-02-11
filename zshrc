@@ -1,28 +1,30 @@
 # user
 NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='nvim'
+EDITOR='vi'
 
-# editor
+# aliases
+alias dots='cat ~/personal/dotfiles/README.md | npx codedown sh'
 if [ "$EDITOR" != vi ]; then
-	alias vi="$EDITOR"
+  alias vi="$EDITOR"
 fi
+alias ls='ls --color=auto'
 
 # path
 paths=(
-	"$HOME/.bin"   # custom binaries
-	"$HOME/go/bin" # Go binaries
+  "$HOME/.bin"   # custom binaries
+  "$HOME/go/bin" # Go binaries
 )
 
 for dir in "${paths[@]}"; do
-	[ -d "$dir" ] && PATH="$PATH:$dir"
+  [ -d "$dir" ] && PATH="$PATH:$dir"
 done
 
 # homebrew
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # prompt
-PS1='%1~: '
+PS1='%~: '
 
 # fuzzy finder
 command -v fzf >/dev/null && source <(fzf --zsh)

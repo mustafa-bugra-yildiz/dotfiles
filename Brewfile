@@ -1,39 +1,17 @@
+tap "homebrew/bundle"
 tap "nikitabobko/tap"
-tap "pulumi/tap"
-
-# ide
-brew "neovim"
-cask "cursor"
-
-# languages
-brew "go"
-brew "fnm"
-
-# formatters
-brew "shfmt" # .sh
-
-# package managers
-brew "pnpm"
-
-# tools
-brew "ast-grep"
-brew "awscli"
 brew "fd"
 brew "flyctl"
+brew "fnm"
 brew "fzf"
+brew "go"
 brew "httpie"
 brew "jq"
-brew "pulumi"
 brew "ripgrep"
 brew "scdoc"
-cask "docker"
-
-# terminal
-cask "ghostty"
-
-# apps
 cask "aerospace"
-cask "chatgpt"
+cask "docker"
+cask "ghostty"
 cask "mullvadvpn"
 cask "signal"
 cask "spotify"
