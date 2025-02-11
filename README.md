@@ -12,8 +12,6 @@ constraining it to my messy envrionment?
 
 So now instead of me dictating the churn, it dictates my fate.
 
-
-
 ## Where is the code?
 
 You can run `cat README.md | npx codedown sh` to extract the code
@@ -25,7 +23,7 @@ from this file.
 
 I usually alias this to `dots`.
 
-Steps it it takes in order:
+Steps it takes in order:
 
 - Copy the dotfiles:
 
@@ -49,3 +47,10 @@ cp ~/.zshrc zshrc
 ```
 
 After that I don't need to do much other than commit the changes.
+
+## Why?
+
+This lets me just do whatever I want without a care in the world
+and still be able to save the state of my environment.
+
+Which means I am allowed to be wild.
