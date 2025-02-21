@@ -1,7 +1,7 @@
 # user
 NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='vi'
+EDITOR='nvim'
 
 # aliases
 alias dots='cat ~/personal/dotfiles/README.md | npx codedown sh'
@@ -37,3 +37,6 @@ export PATH
 export NAME
 export EMAIL
 export EDITOR
+
+# Created by `pipx` on 2025-02-20 01:57:20
+export PATH="$PATH:/Users/mby/.local/bin"
