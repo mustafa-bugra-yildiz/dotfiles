@@ -30,28 +30,35 @@ vim.g.maplocalleader = "\\"
 vim.opt.laststatus = 0
 vim.opt.cmdheight = 0
 
--- line numbers
-vim.opt.relativenumber = true
+-- tab length
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = false
+
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- packages
 require('lazy').setup({
 	spec = {
-		-- colorscheme
+		-- theme
 		{
-			'loctvl842/monokai-pro.nvim',
+			'catppuccin/nvim',
+			name = 'catppuccin',
 			config = function()
-				require('monokai-pro').setup()
-				vim.cmd.colorscheme 'monokai-pro'
+				vim.cmd.colorscheme "catppuccin-frappe"
 			end,
 		},
 
 		-- file navigation
 		{
-			'stevearc/oil.nvim',
-			dependencies = { { "echasnovski/mini.icons", opts = {} } },
+			'nvim-tree/nvim-tree.lua',
+			version = '*',
+			dependencies = { { 'nvim-tree/nvim-web-devicons' } },
 			config = function()
-				require("oil").setup()
-				vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+				require('nvim-tree').setup({})
+				vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 			end,
 		},
 
@@ -64,7 +71,6 @@ require('lazy').setup({
 			end,
 		},
 	},
-	install = { colorscheme = { 'monokai-pro' } },
 })
 
 

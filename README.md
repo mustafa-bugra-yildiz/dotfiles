@@ -46,6 +46,13 @@ brew bundle dump
 cp ~/.zshrc zshrc
 ```
 
+- Remove some stuff I don't want to commit
+
+```sh
+rm -rf config/github-copilot
+rm -rf config/zed/*/
+```
+
 After that I don't need to do much other than commit the changes.
 
 ## Why?
