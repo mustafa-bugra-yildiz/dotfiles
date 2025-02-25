@@ -1,7 +1,7 @@
 # user
 NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='nvim'
+EDITOR='vi'
 
 # aliases
 alias dots='cat ~/personal/dotfiles/README.md | npx codedown sh'
