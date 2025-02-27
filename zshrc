@@ -1,13 +1,8 @@
 # user
 NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
-EDITOR='vi'
 
 # aliases
-alias dots='cat ~/personal/dotfiles/README.md | npx codedown sh'
-if [ "$EDITOR" != vi ]; then
-  alias vi="$EDITOR"
-fi
 alias ls='ls --color=auto'
 
 # path
@@ -23,12 +18,6 @@ done
 # homebrew
 [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# prompt
-PS1='%~: '
-
-# fuzzy finder
-command -v fzf >/dev/null && source <(fzf --zsh)
-
 # fnm
 command -v fnm >/dev/null && eval "$(fnm env)"
 
@@ -36,7 +25,3 @@ command -v fnm >/dev/null && eval "$(fnm env)"
 export PATH
 export NAME
 export EMAIL
-export EDITOR
-
-# Created by `pipx` on 2025-02-20 01:57:20
-export PATH="$PATH:/Users/mby/.local/bin"
