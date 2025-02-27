@@ -46,6 +46,11 @@ brew bundle dump
 cp ~/.zshrc zshrc
 ```
 
+- Copy git config
+```sh
+cp ~/.gitconfig gitconfig
+```
+
 - Remove some stuff I don't want to commit
 
 ```sh
