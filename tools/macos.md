@@ -1,0 +1,22 @@
+# Why MacOS?
+
+- __Hardware is amazing right now__. Nothing can compare with it.
+  I value battery life and longevity to pretty much everything else.
+  Combine that with the decent performance and the way it syncs with my other
+  stuff? No brainer if you ask me.
+
+- __Software is doable__. I know, it sucks for everything else other than web dev.
+  But everything just works. Most companies ship native stuff for this abysmal OS.
+  And very often I don't need to think twice before typing `brew install THING`.
+  It is almost always there.
+
+- __Kinda pricey?__. On the other hand, this is what I do for a living.
+  It doesn't make sense to cut loose the expenses from where the money is coming.
+  At the end of the day, this is one time payment and the Apple Silicon hardware
+  lasts surprisingly long. Worth.
+
+- __It is UNIX__. Strange right? But apparently true. I grew up writing code
+  on UNIX machines, so MacOS strikes a perfect balance of modern and old for me.
+
+# Customizations
+I literally don't do anything. It works fine OOTB.

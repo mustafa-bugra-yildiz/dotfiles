@@ -1,6 +1,12 @@
 # user
-NAME='mustafa-bugra-yildiz'
 EMAIL='mustafa.bugra.yildiz@icloud.com'
+NAME='mustafa-bugra-yildiz'
+
+# omz
+ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 # aliases
 alias ls='ls --color=auto'
@@ -22,6 +28,7 @@ done
 command -v fnm >/dev/null && eval "$(fnm env)"
 
 # exports
-export PATH
-export NAME
 export EMAIL
+export NAME
+export PATH
+export ZSH

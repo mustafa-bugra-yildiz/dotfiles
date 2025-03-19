@@ -3,15 +3,11 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "ui_font_size": 16,
   "ui_font_family": "CommitMono",
 
   // typography
   "buffer_font_family": "CommitMono",
-  "buffer_font_size": 16,
-  "buffer_line_height": {
-    "custom": 2
-  },
+  "buffer_line_height": "comfortable",
 
   // editor layout
   "toolbar": {
@@ -20,7 +16,7 @@
     "selections_menu": false
   },
   "gutter": {
-    "line_numbers": false,
+    "line_numbers": true,
     "code_actions": false,
     "folds": false,
     "runnables": false
