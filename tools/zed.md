@@ -73,14 +73,14 @@ echo "Installing zed."
 command -v zed>/dev/null || brew install zed
 
 [ ! -d ~/.config/zed ] && {
-  echo "New setup found, copying settings."
+  echo "zed: First install detected, copying settings."
   mkdir -p ~/.config
   cp -r ~/.config/zed
 }
 
 # Sync
 [ -f ~/.config/zed/settings.json ] && {
-  echo "Sync zed/settings.json"
+  echo "sync: zed/settings.json"
   cp ~/.config/zed/settings.json config/zed/settings.json
 }
 ```

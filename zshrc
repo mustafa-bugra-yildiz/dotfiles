@@ -13,8 +13,9 @@ alias ls='ls --color=auto'
 
 # path
 paths=(
-  "$HOME/.bin"   # custom binaries
-  "$HOME/go/bin" # Go binaries
+  "$HOME/.bin"                   # custom binaries
+  "$HOME/go/bin"                 # Go binaries
+  "/opt/homebrew/opt/rustup/bin" # Rust binaries
 )
 
 for dir in "${paths[@]}"; do
@@ -22,10 +23,14 @@ for dir in "${paths[@]}"; do
 done
 
 # homebrew
-[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -f /opt/homebrew/bin/brew ] && {
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+}
 
 # fnm
-command -v fnm >/dev/null && eval "$(fnm env)"
+command -v fnm >/dev/null && {
+  eval "$(fnm env)"
+}
 
 # exports
 export EMAIL
