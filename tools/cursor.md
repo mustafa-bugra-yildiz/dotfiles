@@ -1,4 +1,4 @@
-# Why Zed?
+# Why Cursor?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -26,7 +26,6 @@ Stupid:
 
 Almost all them lacked something. My requirements were simple:
 
-
 ## __Works OOTB__
 I couldn't care less about setting things up.
 
@@ -45,8 +44,6 @@ Elimination:
 - Visual Studio
 - JetBrains X
 
-So far so good.
-
 ## __Fast__
 On a good enough hardware this doesn't matter, but I am very sensitive
 to latency for some reason.
@@ -55,32 +52,25 @@ Elimination:
 - Visual Studio Code
 - Cursor
 
-## __Online__
-I should be able to work with my friends, live.
+## __Extensible__
+I need good extensions.
 
 Elimination:
 - Helix
 - Sublime Text 4
+- Zed
 
 # Conclusion
-I use Zed because everything else sucks.
-Not because it is amazing.
+You may have noticed that after all this, I am left with nothing.
+That is, everything sucks. I just use whatever is the least sucky.
+Which happens to be Cursor for now because it is vscode with some AI stuff.
+Plus, it predicts quite well.
 
 # Setup
 
 ```sh
-echo "Installing zed."
-command -v zed>/dev/null || brew install zed
-
-[ ! -d ~/.config/zed ] && {
-  echo "zed: First install detected, copying settings."
-  mkdir -p ~/.config
-  cp -r ~/.config/zed
-}
-
-# Sync
-[ -f ~/.config/zed/settings.json ] && {
-  echo "sync: zed/settings.json"
-  cp ~/.config/zed/settings.json config/zed/settings.json
+command -v cursor >/dev/null || {
+  echo "Installing cursor."
+  brew install cursor
 }
 ```
