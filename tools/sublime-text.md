@@ -1,4 +1,4 @@
-# Why Cursor?
+# Why Sublime Text?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -63,14 +63,13 @@ Elimination:
 # Conclusion
 You may have noticed that after all this, I am left with nothing.
 That is, everything sucks. I just use whatever is the least sucky.
-Which happens to be Cursor for now because it is vscode with some AI stuff.
-Plus, it predicts quite well.
+Which happens to be Sublime Text for now.
 
 # Setup
 
 ```sh
-command -v cursor >/dev/null || {
-  echo "Installing cursor."
-  brew install cursor
+command -v subl >/dev/null || {
+  echo "Installing sublime text."
+  brew install sublime-text
 }
 ```

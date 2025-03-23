@@ -1,7 +1,7 @@
 # Bugra's Configuration
 
 Hello, this is how I configure my laptop. I'll be a pragmatist, and
-give reasons as to why I do what I do per file per tool. But the
+give reasons as to why I do what I do per file per tool. The
 complete list is below
 
 General:
@@ -9,5 +9,5 @@ General:
 - [Brew](/tools/brew.md)
 
 Coding Related:
-- [Zed](/tools/zed.md)
+- [Sublime Text](/tools/sublime-text.md)
 - [ZSH](/tools/zsh.md)
