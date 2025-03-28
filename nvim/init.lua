@@ -18,12 +18,12 @@ vim.opt.signcolumn = 'yes'
 vim.opt.statuscolumn = '%l %s%C'
 vim.opt.colorcolumn = '80'
 
--- splits
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeFocus<cr>')
+-- fuzzy finder
+vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
+vim.keymap.set('n', '<leader>/', '<cmd>Telescope live_grep<cr>')
 
--- tabs
-vim.keymap.set('n', 'H', '<cmd>BufferLineCyclePrev<cr>')
-vim.keymap.set('n', 'L', '<cmd>BufferLineCycleNext<cr>')
+-- terminal
+vim.keymap.set('t', '<esc>', '<c-\\><c-n>')
 
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -54,12 +54,21 @@ require('lazy').setup({
 
 	-- responsive colorscheme
 	{
-		'projekt0n/github-nvim-theme',
+		'cormacrelf/dark-notify',
+		dependencies = { 'projekt0n/github-nvim-theme' },
 		config = function()
 			require('github-theme').setup({
 				options = { transparent = true },
 			})
-			vim.cmd.colorscheme('github_light')
+
+			local dn = require('dark_notify')
+			dn.run({
+				schemes = {
+					dark = 'github_dark',
+					light = 'github_light',
+				},
+			})
+			dn.update()
 		end,
 	},
 	{ 'nvim-lualine/lualine.nvim', opts = {} },
@@ -67,22 +76,63 @@ require('lazy').setup({
 	-- session manager
 	{ 'rmagatti/auto-session', opts = {} },
 
-	-- tabs
-	{
-		'akinsho/bufferline.nvim',
-		version = "*",
-		dependencies = 'nvim-tree/nvim-web-devicons',
-		config = function()
-			require('bufferline').setup()
-		end,
-	},
-
 	-- file tree
 	{
 		'nvim-tree/nvim-tree.lua',
-		opts = {
-			view = { signcolumn = 'no' },
+		config = function()
+			require('nvim-tree').setup({
+				view = { signcolumn = 'no' },
+			})
+			vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+		end,
+	},
+
+	-- fuzzy finder
+	{
+		'nvim-telescope/telescope.nvim',
+		tag = '0.1.8',
+		dependencies = { 'nvim-lua/plenary.nvim' },
+	},
+
+	-- navigation
+	{
+		'ggandor/leap.nvim',
+		config = function()
+			require('leap').create_default_mappings()
+		end,
+	},
+
+	-- git
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"echasnovski/mini.pick",
 		},
+		config = true,
+	},
+
+	-- smooth scrolling
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			local neoscroll = require('neoscroll')
+			neoscroll.setup({
+				post_hook = function(info)
+					if info ~= 'center' then
+						return
+					end
+					vim.cmd("normal! zz")
+				end,
+			})
+
+			local opts = { duration = 200, easing = 'sine', info = 'center' } 
+			vim.keymap.set('n', 'H', '^')
+			vim.keymap.set('n', 'J', function() neoscroll.ctrl_d(opts) end)
+			vim.keymap.set('n', 'K', function() neoscroll.ctrl_u(opts) end)
+			vim.keymap.set('n', 'L', '$')
+		end
 	},
 
 })
