@@ -7,11 +7,9 @@ and call it a day.
 # Setup
 
 ```sh
-[ ! -f ~/.zshrc ] && {
-  echo "zsh: First install detected"
-  cp zshrc ~/.zshrc
+[ ! -f ~/.zshrc ] && cp zshrc ~/.zshrc
+[   -f ~/.zshrc ] && {
+  echo "sync: zsh"
+  cp ~/.zshrc zshrc
 }
-
-echo "sync: zshrc"
-[   -f ~/.zshrc ] && cp ~/.zshrc zshrc
 ```

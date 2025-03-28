@@ -1,0 +1,24 @@
+# colors
+theme        = light:OneHalfLight, dark:OneHalfDark
+window-theme = system
+
+# typography
+font-family = Fira Code
+font-style  = Retina
+font-size   = 14
+
+adjust-cell-height   = 7
+adjust-cursor-height = 7
+adjust-cell-width    = -1
+
+# cursor
+cursor-color            = #aaa
+mouse-hide-while-typing = true
+
+# window
+window-padding-x   = 10
+window-padding-y   = 10
+window-step-resize = true
+
+# keys
+macos-option-as-alt = true

@@ -9,5 +9,15 @@ General:
 - [Brew](/tools/brew.md)
 
 Coding Related:
-- [Sublime Text](/tools/sublime-text.md)
+- [Neovim](/tools/neovim.md)
 - [ZSH](/tools/zsh.md)
+- [Ghostty](/tools/ghostty.md)
+- [Git](/tools/git.md)
+
+## Setup
+
+All you have to do is this:
+
+```sh
+cat tools/*.md | npx codedown sh | sh
+```

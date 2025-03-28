@@ -13,6 +13,7 @@ Plus, a simple `Brewfile` is all I ask anyway.
 # Setup
 
 ```sh
+echo "sync: brew"
 rm Brewfile
 brew bundle dump
 ```

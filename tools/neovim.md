@@ -1,4 +1,4 @@
-# Why Sublime Text?
+# Why Neovim?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -60,16 +60,23 @@ Elimination:
 - Sublime Text 4
 - Zed
 
-# Conclusion
+## Conclusion
 You may have noticed that after all this, I am left with nothing.
-That is, everything sucks. I just use whatever is the least sucky.
-Which happens to be Sublime Text for now.
+That is, everything sucks. I just make sure my Neovim config doesn't
+bother me much.
 
-# Setup
+## Setup
 
 ```sh
-command -v subl >/dev/null || {
-  echo "Installing sublime text."
-  brew install sublime-text
+command -v nvim >/dev/null || {
+  echo "Installing neovim."
+  brew install neovim
+}
+
+[ ! -d ~/.config/nvim ] && cp -r nvim ~/.config/nvim
+[   -d ~/.config/nvim ] && {
+  echo "sync: neovim"
+  rm -rf nvim
+  cp -r ~/.config/nvim nvim
 }
 ```
