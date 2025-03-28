@@ -1,10 +1,12 @@
--- disable statusline
-vim.cmd([[
-	set laststatus=0
-	hi! link StatusLine Normal
-	hi! link StatusLineNC Normal
-	set statusline=%{repeat('─',winwidth('.'))}
-]])
+-- leader
+vim.g.mapleader = ' '
+
+-- global statusline
+vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
+
+-- autosession options
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- disable netrw (nvim-tree)
 vim.g.loaded_netrw = 1
@@ -13,8 +15,15 @@ vim.g.loaded_netrwPlugin = 1
 -- editor
 vim.opt.number = true
 vim.opt.signcolumn = 'yes'
-vim.opt.statuscolumn = '%l %s%C' 
+vim.opt.statuscolumn = '%l %s%C'
 vim.opt.colorcolumn = '80'
+
+-- splits
+vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeFocus<cr>')
+
+-- tabs
+vim.keymap.set('n', 'H', '<cmd>BufferLineCyclePrev<cr>')
+vim.keymap.set('n', 'L', '<cmd>BufferLineCycleNext<cr>')
 
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -53,11 +62,27 @@ require('lazy').setup({
 			vim.cmd.colorscheme('github_light')
 		end,
 	},
+	{ 'nvim-lualine/lualine.nvim', opts = {} },
 
 	-- session manager
 	{ 'rmagatti/auto-session', opts = {} },
 
+	-- tabs
+	{
+		'akinsho/bufferline.nvim',
+		version = "*",
+		dependencies = 'nvim-tree/nvim-web-devicons',
+		config = function()
+			require('bufferline').setup()
+		end,
+	},
+
 	-- file tree
-	{ 'nvim-tree/nvim-tree.lua', opts = {} },
+	{
+		'nvim-tree/nvim-tree.lua',
+		opts = {
+			view = { signcolumn = 'no' },
+		},
+	},
 
 })

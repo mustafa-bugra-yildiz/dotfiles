@@ -16,7 +16,7 @@ cursor-color            = #aaa
 mouse-hide-while-typing = true
 
 # window
-window-padding-x   = 10
+window-padding-x   = 10,5
 window-padding-y   = 10
 window-step-resize = true
 
