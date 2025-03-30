@@ -96,9 +96,9 @@ require('lazy').setup({
 		tag = '0.1.8',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = function()
-			vim.keymap.set('n', '<c-p>', '<cmd>Telescope find_files<cr>')
-			vim.keymap.set('n', '<c-t>', '<cmd>Telescope lsp_document_symbols<cr>')
-			vim.keymap.set('n', '/',     '<cmd>Telescope live_grep<cr>')
+			vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
+			vim.keymap.set('n', '<leader>s', '<cmd>Telescope lsp_document_symbols<cr>')
+			vim.keymap.set('n', '<leader>/', '<cmd>Telescope live_grep<cr>')
 		end,
 	},
 
@@ -118,7 +118,10 @@ require('lazy').setup({
 			"sindrets/diffview.nvim",
 			"echasnovski/mini.pick",
 		},
-		config = true,
+		config = function()
+			require('neogit').setup()
+			vim.keymap.set('n', '<leader>g', '<cmd>Neogit<cr>')
+		end,
 	},
 
 	-- smooth scrolling
