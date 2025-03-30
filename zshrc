@@ -8,6 +8,22 @@ ZSH_THEME="robbyrussell" # set by `omz`
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# functions
+work() {
+  pick() {
+    find ~/Desktop -type d | # Every directory in ~/Desktop
+    grep '.git$'           | # Filter the ones with git repos
+    grep -v 'node_modules' | # Remove node_modules -_-
+    sed 's/\/.git$//'      | # Truncate '/.git$' suffix
+    sed 's/.*Desktop\///'  | # Truncate '.*/Desktop/' prefix
+    fzf --preview='bat --theme auto:system --color always --style=plain ~/Desktop/{}/README.md' \
+        --preview-window=down
+  }
+
+  p=$(pick)
+  test "$p" != "" && cd ~/Desktop/$p && nvim && cd -
+}
+
 # aliases
 alias ls='ls --color=auto'
 
