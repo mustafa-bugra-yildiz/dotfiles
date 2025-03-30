@@ -5,6 +5,9 @@ vim.g.mapleader = ' '
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 0
 
+-- window borders
+vim.o.winborder = 'rounded'
+
 -- autosession options
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
@@ -17,10 +20,6 @@ vim.opt.number = true
 vim.opt.signcolumn = 'yes'
 vim.opt.statuscolumn = '%l %s%C'
 vim.opt.colorcolumn = '80'
-
--- fuzzy finder
-vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<leader>/', '<cmd>Telescope live_grep<cr>')
 
 -- terminal
 vim.keymap.set('t', '<esc>', '<c-\\><c-n>')
@@ -55,8 +54,13 @@ require('lazy').setup({
 	-- responsive colorscheme
 	{
 		'cormacrelf/dark-notify',
-		dependencies = { 'projekt0n/github-nvim-theme' },
+		dependencies = {
+			'projekt0n/github-nvim-theme',
+			'nvim-lualine/lualine.nvim',
+		},
 		config = function()
+			require('lualine').setup()
+
 			require('github-theme').setup({
 				options = { transparent = true },
 			})
@@ -64,14 +68,13 @@ require('lazy').setup({
 			local dn = require('dark_notify')
 			dn.run({
 				schemes = {
-					dark = 'github_dark',
-					light = 'github_light',
+					dark = 'github_dark_tritanopia',
+					light = 'github_light_tritanopia',
 				},
 			})
 			dn.update()
 		end,
 	},
-	{ 'nvim-lualine/lualine.nvim', opts = {} },
 
 	-- session manager
 	{ 'rmagatti/auto-session', opts = {} },
@@ -92,6 +95,11 @@ require('lazy').setup({
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.8',
 		dependencies = { 'nvim-lua/plenary.nvim' },
+		config = function()
+			vim.keymap.set('n', '<c-p>', '<cmd>Telescope find_files<cr>')
+			vim.keymap.set('n', '<c-t>', '<cmd>Telescope lsp_document_symbols<cr>')
+			vim.keymap.set('n', '/',     '<cmd>Telescope live_grep<cr>')
+		end,
 	},
 
 	-- navigation
@@ -114,25 +122,42 @@ require('lazy').setup({
 	},
 
 	-- smooth scrolling
-	{
-		"karb94/neoscroll.nvim",
-		config = function()
-			local neoscroll = require('neoscroll')
-			neoscroll.setup({
-				post_hook = function(info)
-					if info ~= 'center' then
-						return
-					end
-					vim.cmd("normal! zz")
-				end,
-			})
+	{ "karb94/neoscroll.nvim", opts = {} },
 
-			local opts = { duration = 200, easing = 'sine', info = 'center' } 
-			vim.keymap.set('n', 'H', '^')
-			vim.keymap.set('n', 'J', function() neoscroll.ctrl_d(opts) end)
-			vim.keymap.set('n', 'K', function() neoscroll.ctrl_u(opts) end)
-			vim.keymap.set('n', 'L', '$')
-		end
+	-- lsp
+	{
+		'neovim/nvim-lspconfig',
+		config = function()
+			vim.diagnostic.config({ virtual_text = true })
+
+			local lspconfig = require('lspconfig')
+			lspconfig.gopls.setup({})
+
+			vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+			vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+		end,
 	},
+
+	-- syntax highlighting
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "master",
+		build = ":TSUpdate",
+		opts = {
+			auto_install = true,
+			highlight = { enable = true },
+			indent = { enable = true },
+			textobjects = { enable = true },
+			incremental_selection = {
+				enable = true,
+				keymaps = {
+					init_selection = "<cr>",
+					node_incremental = "<cr>",
+					scope_incremental = "grc",
+					node_decremental = "grm",
+				},
+			},
+		},
+	}
 
 })

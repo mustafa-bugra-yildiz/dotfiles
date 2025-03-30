@@ -3,17 +3,19 @@ theme        = light:OneHalfLight, dark:OneHalfDark
 window-theme = system
 
 # typography
-font-family = Fira Code
-font-style  = Retina
-font-size   = 14
+font-family = CommitMono
+font-style  = Regular
+font-size   = 16
 
-adjust-cell-height   = 7
-adjust-cursor-height = 7
+adjust-cell-height   = 10
+adjust-cursor-height = 10
 adjust-cell-width    = -1
 
 # cursor
-cursor-color            = #aaa
-mouse-hide-while-typing = true
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style               = block
+cursor-color               = #ddd
+mouse-hide-while-typing    = true
 
 # window
 window-padding-x   = 10,5
@@ -22,3 +24,6 @@ window-step-resize = true
 
 # keys
 macos-option-as-alt = true
+
+# colors
+palette = 6=#ff574a
