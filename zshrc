@@ -21,7 +21,7 @@ work() {
   }
 
   p=$(pick)
-  test "$p" != "" && cd ~/Desktop/$p && nvim && cd -
+  test "$p" != "" && cd ~/Desktop/$p && nvim
 }
 
 # aliases

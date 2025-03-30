@@ -14,6 +14,6 @@ Plus, a simple `Brewfile` is all I ask anyway.
 
 ```sh
 echo "sync: brew"
-rm Brewfile
+rm -f Brewfile
 brew bundle dump
 ```
