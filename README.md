@@ -9,7 +9,7 @@ General:
 - [Brew](/tools/brew.md)
 
 Coding Related:
-- [Neovim](/tools/neovim.md)
+- [Cursor](/tools/cursor.md)
 - [ZSH](/tools/zsh.md)
 - [Ghostty](/tools/ghostty.md)
 - [Git](/tools/git.md)

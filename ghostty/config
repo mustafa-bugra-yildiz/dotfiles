@@ -1,6 +1,5 @@
-# colors
-theme        = light:OneHalfLight, dark:OneHalfDark
-window-theme = system
+# theme
+theme = Dark Modern
 
 # typography
 font-family = CommitMono
@@ -18,8 +17,6 @@ cursor-color               = #ddd
 mouse-hide-while-typing    = true
 
 # window
-window-padding-x   = 10,5
-window-padding-y   = 10
 window-step-resize = true
 
 # keys

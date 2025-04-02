@@ -1,0 +1,67 @@
+{
+    // typography
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.unicodeHighlight.includeStrings": false,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.lineHeight": 1.75,
+    "editor.lineHeight": 1.75,
+    "workbench.fontAliasing": "antialiased",
+
+    // auto formatting
+    "json.format.keepLines": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "editor.rulers": [
+        80
+    ],
+
+    // version control
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    // project manager
+    "projectManager.git.baseFolders": [
+        "~/Desktop/personal",
+        "~/Desktop/work"
+    ],
+
+    // extensions
+    "extensions.ignoreRecommendations": true,
+
+    // ai
+    "cursor.cpp.disabledLanguages": [
+        "markdown",
+        "plaintext"
+    ],
+
+    // layout
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.activityBar.location": "hidden",
+    "editor.stickyScroll.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.lightbulb.enabled": "off",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.panel.defaultLocation": "top",
+
+    // theme
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.preferredDarkColorTheme": "Cursor Dark",
+    "editor.semanticHighlighting.enabled": true,
+
+    // file tree
+    "workbench.tree.indent": 15,
+    "workbench.tree.renderIndentGuides": "none",
+
+    // editor
+    "editor.guides.indentation": false,
+    "editor.renderLineHighlight": "none",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "solid",
+}

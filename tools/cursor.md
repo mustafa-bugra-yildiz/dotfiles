@@ -1,4 +1,4 @@
-# Why Neovim?
+# Why Cursor?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -62,21 +62,20 @@ Elimination:
 
 ## Conclusion
 You may have noticed that after all this, I am left with nothing.
-That is, everything sucks. I just make sure my Neovim config doesn't
-bother me much.
+That is, everything sucks. Use whatever.
 
 ## Setup
 
 ```sh
-command -v nvim >/dev/null || {
-  echo "Installing neovim."
-  brew install neovim
+command -v cursor >/dev/null || {
+  echo "Installing cursor."
+  brew install cursor
 }
 
-[ ! -d ~/.config/nvim ] && cp -r nvim ~/.config/nvim
-[   -d ~/.config/nvim ] && {
-  echo "sync: neovim"
-  rm -rf nvim
-  cp -r ~/.config/nvim nvim
+settings=~/Library/Application\ Support/Cursor/User/settings.json
+[ ! -f "$settings" ] && cp cursor/settings.json "$settings"
+[   -f "$settings" ] && {
+  echo "sync: cursor"
+  cp "$settings" cursor/settings.json
 }
 ```
