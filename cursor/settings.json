@@ -47,6 +47,7 @@
     "editor.lightbulb.enabled": "off",
     "workbench.tree.enableStickyScroll": false,
     "workbench.panel.defaultLocation": "top",
+    "workbench.layoutControl.enabled": false,
 
     // theme
     "window.autoDetectColorScheme": true,
