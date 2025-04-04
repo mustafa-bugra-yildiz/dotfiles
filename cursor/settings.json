@@ -39,9 +39,9 @@
     ],
 
     // layout
+    "window.zoomLevel": 2,
     "workbench.sideBar.location": "right",
-    "workbench.activityBar.orientation": "vertical",
-    "workbench.activityBar.location": "hidden",
+    "workbench.activityBar.location": "top",
     "editor.stickyScroll.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.lightbulb.enabled": "off",
@@ -54,6 +54,24 @@
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.preferredDarkColorTheme": "Cursor Dark",
     "editor.semanticHighlighting.enabled": true,
+    "workbench.colorCustomizations": {
+        "[Cursor Dark]": {
+            "statusBar.background": "#242424",
+            "panel.background": "#242424",
+            "editor.background": "#242424",
+            "editorGutter.background": "#242424",
+            "tab.inactiveBackground": "#242424",
+            "tab.activeBackground": "#333",
+            "titleBar.activeBackground": "#242424",
+            "titleBar.inactiveBackground": "#222",
+            "terminal.background": "#242424",
+            "sideBar.background": "#242424",
+            "sideBarSectionHeader.background": "#242424",
+            "editorGroupHeader.tabsBackground": "#242424",
+            "commandCenter.background": "#242424",
+            "editorGroup.emptyBackground": "#242424"
+        }
+    },
 
     // file tree
     "workbench.tree.indent": 15,
@@ -65,4 +83,5 @@
     "editor.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "solid",
+    "editor.lineNumbers": "on",
 }
