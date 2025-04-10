@@ -51,6 +51,9 @@ vim.keymap.set('n', '<c-t>', '<cmd>tabnew<cr>')
 vim.keymap.set('n', '<c-[>', '<cmd>tabprev<cr>')
 vim.keymap.set('n', '<c-]>', '<cmd>tabnext<cr>')
 
+-- piping
+vim.keymap.set('v', '|', "y:vsp<cr>:term<cr>p<cr>i<cr>")
+
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
