@@ -1,26 +1,23 @@
 # theme
-theme = Dark Modern
+theme = Apple System Colors Light
 
 # typography
-font-family = JetBrains Mono
+font-family = Agave
 font-style  = Regular
-font-size   = 16
-
-adjust-cell-height   = 7
-adjust-cursor-height = 7
-adjust-cell-width    = -1
+font-size   = 14
 
 # cursor
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style               = block
-cursor-color               = #ddd
+cursor-color               = #000
 mouse-hide-while-typing    = true
 
 # window
 window-step-resize = true
+window-padding-x   = 5
+window-padding-y   = 5
+window-width       = 80
+window-height      = 24
 
 # keys
 macos-option-as-alt = true
-
-# colors
-palette = 6=#ff574a
