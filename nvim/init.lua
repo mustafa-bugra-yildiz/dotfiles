@@ -1,15 +1,16 @@
 -- leader
 vim.g.mapleader = ' '
 
+-- weird trick
+vim.keymap.set({ 'n', 'v' }, ';', ':')
+vim.keymap.set({ 'n', 'v' }, ':', ';')
+
 -- global statusline
 vim.opt.laststatus = 3
 vim.opt.cmdheight = 0
 
 -- window borders
 vim.o.winborder = 'rounded'
-
--- autosession options
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- disable netrw (nvim-tree)
 vim.g.loaded_netrw = 1
@@ -22,7 +23,33 @@ vim.opt.statuscolumn = '%l %s%C'
 vim.opt.colorcolumn = '80'
 
 -- terminal
+vim.keymap.set('n', 't', '<cmd>term<cr>i')
 vim.keymap.set('t', '<esc>', '<c-\\><c-n>')
+
+-- splits
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.keymap.set('n', '|', '<cmd>vsp<cr>')
+vim.keymap.set('n', '-', '<cmd>sp<cr>')
+
+vim.keymap.set('n', '<c-h>', '<c-w>h')
+vim.keymap.set('n', '<c-j>', '<c-w>j')
+vim.keymap.set('n', '<c-k>', '<c-w>k')
+vim.keymap.set('n', '<c-l>', '<c-w>l')
+
+-- buffers
+vim.keymap.set('n', 'q', '<cmd>q<cr>')
+vim.keymap.set('n', '<enter>', '<cmd>w<cr>')
+
+-- saving
+vim.keymap.set('n', '{', '<c-u>zz')
+vim.keymap.set('n', '}', '<c-d>zz')
+
+-- tabs
+vim.keymap.set('n', '<c-t>', '<cmd>tabnew<cr>')
+vim.keymap.set('n', '<c-[>', '<cmd>tabprev<cr>')
+vim.keymap.set('n', '<c-]>', '<cmd>tabnext<cr>')
 
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -76,9 +103,6 @@ require('lazy').setup({
 		end,
 	},
 
-	-- session manager
-	{ 'rmagatti/auto-session', opts = {} },
-
 	-- file tree
 	{
 		'nvim-tree/nvim-tree.lua',
@@ -123,9 +147,6 @@ require('lazy').setup({
 			vim.keymap.set('n', '<leader>g', '<cmd>Neogit<cr>')
 		end,
 	},
-
-	-- smooth scrolling
-	{ "karb94/neoscroll.nvim", opts = {} },
 
 	-- lsp
 	{
