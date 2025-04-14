@@ -1,4 +1,4 @@
-# Why Cursor?
+# Why Sublime Text?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -67,15 +67,14 @@ That is, everything sucks. Use whatever.
 ## Setup
 
 ```sh
-command -v cursor >/dev/null || {
-  echo "Installing cursor."
-  brew install cursor
+command -v subl >/dev/null || {
+  echo "Installing sublime text."
+  brew install sublime-text
 }
 
-settings=~/Library/Application\ Support/Cursor/User/settings.json
-[ ! -f "$settings" ] && cp cursor/settings.json "$settings"
-[   -f "$settings" ] && {
-  echo "sync: cursor"
-  cp "$settings" cursor/settings.json
+settings=~/Library/Application\ Support/Sublime\ Text/Packages/User
+[ ! -L "$settings" ] && {
+  echo "sync: sublime-text"
+  ln -sf $(pwd)/sublime-text "$settings"
 }
 ```

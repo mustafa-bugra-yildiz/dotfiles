@@ -1,8 +1,7 @@
 # Why Ghostty?
 
-Ever since switching to Neovim from Sublime Text I have been in shock and awe
-of how terrible terminals handle rendering fonts. Wanna see a list of the least
-sucking ones I tried?
+I have been in shock and awe of how terrible terminals handle rendering fonts.
+Wanna see a list of the least sucking ones I tried?
 
 - iTerm2
 - Alacritty

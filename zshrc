@@ -1,6 +1,7 @@
 # user
 EMAIL='mustafa.bugra.yildiz@icloud.com'
 NAME='mustafa-bugra-yildiz'
+EDITOR='subl'
 
 # omz
 ZSH="$HOME/.oh-my-zsh"
@@ -21,11 +22,12 @@ work() {
   }
 
   p=$(pick)
-  test "$p" != "" && cd ~/Desktop/$p && nvim
+  test "$p" != "" && cd ~/Desktop/$p && $EDITOR -a .
 }
 
 # aliases
 alias ls='ls --color=auto'
+unalias 9
 
 # path
 paths=(
@@ -41,11 +43,6 @@ done
 # homebrew
 [ -f /opt/homebrew/bin/brew ] && {
   eval "$(/opt/homebrew/bin/brew shellenv)"
-}
-
-# fnm
-command -v fnm >/dev/null && {
-  eval "$(fnm env)"
 }
 
 # exports

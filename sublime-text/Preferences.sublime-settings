@@ -1,0 +1,28 @@
+{
+	// typography
+	"font_size": 16,
+	"font_face": "Agave",
+	"line_padding_top": 2,
+	"line_padding_bottom": 2,
+
+	// formatting
+	"rulers": [80],
+	"scroll_past_end": true,
+	"tab_size": 8,
+	"translate_tabs_to_spaces": false,
+	"ensure_newline_at_eof_on_save": true,
+
+	// theme
+	"theme": "Monokai Pro.sublime-theme",
+	"color_scheme": "Monokai Pro.sublime-color-scheme",
+	"monokai_pro_sidebar_font_size": 14,
+	"monokai_pro_style_title_bar": true,
+
+	// packages
+	"ignored_packages": [
+		"Vintage",
+	],
+
+	// analysis
+	"index_files": true,
+}

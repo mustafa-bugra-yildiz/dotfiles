@@ -1,15 +1,17 @@
 # theme
-theme = Apple System Colors Light
+theme = Monokai Pro
 
 # typography
 font-family = Agave
 font-style  = Regular
-font-size   = 14
+font-size   = 16
+
+adjust-cell-height   = 10
+adjust-cursor-height = 10
 
 # cursor
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style               = block
-cursor-color               = #000
 mouse-hide-while-typing    = true
 
 # window
