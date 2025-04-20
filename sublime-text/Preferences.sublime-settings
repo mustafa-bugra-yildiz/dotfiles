@@ -1,9 +1,7 @@
 {
 	// typography
-	"font_size": 16,
+	"font_size": 22,
 	"font_face": "Agave",
-	"line_padding_top": 2,
-	"line_padding_bottom": 2,
 
 	// formatting
 	"rulers": [80],

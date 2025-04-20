@@ -6,9 +6,6 @@ font-family = Agave
 font-style  = Regular
 font-size   = 16
 
-adjust-cell-height   = 10
-adjust-cursor-height = 10
-
 # cursor
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style               = block
