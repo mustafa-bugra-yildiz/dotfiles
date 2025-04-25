@@ -12,11 +12,11 @@ source $ZSH/oh-my-zsh.sh
 # functions
 work() {
   pick() {
-    find ~/Desktop -type d | # Every directory in ~/Desktop
-    grep '.git$'           | # Filter the ones with git repos
-    grep -v 'node_modules' | # Remove node_modules -_-
-    sed 's/\/.git$//'      | # Truncate '/.git$' suffix
-    sed 's/.*Desktop\///'  | # Truncate '.*/Desktop/' prefix
+    fd -H --type d .git ~/Desktop | # Every directory in ~/Desktop
+    grep '.git/$'                 | # Filter the ones with git repos
+    grep -v 'node_modules'        | # Remove node_modules -_-
+    sed 's/\/.git\/$//'           | # Truncate '/.git$' suffix
+    sed 's/.*Desktop\///'         | # Truncate '.*/Desktop/' prefix
     fzf --preview='bat --theme auto:system --color always --style=plain ~/Desktop/{}/README.md' \
         --preview-window=down
   }
@@ -39,6 +39,8 @@ paths=(
 for dir in "${paths[@]}"; do
   [ -d "$dir" ] && PATH="$PATH:$dir"
 done
+
+PATH="/opt/homebrew/opt/rsync/bin:$PATH"
 
 # homebrew
 [ -f /opt/homebrew/bin/brew ] && {

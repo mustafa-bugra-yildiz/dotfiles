@@ -5,10 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"LSP",
-		"LSP-clangd",
-		"LSP-gopls",
-		"LSP-typescript",
 		"Package Control",
 		"Theme - Monokai Pro",
 	],

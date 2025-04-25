@@ -1,7 +1,7 @@
 {
 	// typography
-	"font_size": 22,
-	"font_face": "Agave",
+	"font_size": 15,
+	"font_face": "JetBrains Mono",
 
 	// formatting
 	"rulers": [80],
@@ -11,9 +11,9 @@
 	"ensure_newline_at_eof_on_save": true,
 
 	// theme
-	"theme": "Monokai Pro.sublime-theme",
-	"color_scheme": "Monokai Pro.sublime-color-scheme",
-	"monokai_pro_sidebar_font_size": 14,
+	"theme": "Monokai Pro (Filter Spectrum).sublime-theme",
+	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
+	"monokai_pro_sidebar_font_size": 12,
 	"monokai_pro_style_title_bar": true,
 
 	// packages

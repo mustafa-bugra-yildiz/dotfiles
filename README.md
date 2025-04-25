@@ -9,9 +9,8 @@ General:
 - [Brew](/tools/brew.md)
 
 Coding Related:
-- [Cursor](/tools/cursor.md)
+- [Sublime Text](/tools/sublime-text.md)
 - [ZSH](/tools/zsh.md)
-- [Ghostty](/tools/ghostty.md)
 - [Git](/tools/git.md)
 
 ## Tech Stack
