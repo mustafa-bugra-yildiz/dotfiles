@@ -18,8 +18,10 @@ Tech:
 
 ## Setup
 
+Get [sitdown](https://github.com/mustafa-bugra-yildiz/sitdown).
+
 ```sh
-cat tools/*.md | npx codedown sh | sh
+sitdown <(cat tools/*.md) sh | sh
 ```
 
 
