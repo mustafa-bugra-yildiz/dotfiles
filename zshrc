@@ -17,7 +17,7 @@ work() {
     grep -v 'node_modules'        | # Remove node_modules -_-
     sed 's/\/.git\/$//'           | # Truncate '/.git$' suffix
     sed 's/.*Desktop\///'         | # Truncate '.*/Desktop/' prefix
-    fzf --preview='bat --theme auto:system --color always --style=plain ~/Desktop/{}/README.md' \
+    fzf --preview='cat ~/Desktop/{}/README.md' \
         --preview-window=down
   }
 

@@ -1,8 +1,6 @@
 # Bugra's Configuration
 
-Hello, this is how I configure my laptop. I'll be a pragmatist, and
-give reasons as to why I do what I do per file per tool. The complete
-list is below
+I use these:
 
 General:
 - [MacOS](/tools/macos.md)
@@ -13,19 +11,44 @@ Coding Related:
 - [ZSH](/tools/zsh.md)
 - [Git](/tools/git.md)
 
-## Tech Stack
+Tech:
+- [Go](/tools/go.md)
 
-You can also find a list of stuff that I use in my everyday life
-as a developer.  These represent the reality (what I use __now__)
-then what I think I'll use next.  There are some ideas sprinkled
-left and right on each of these topics, that's why I have them as
-separate articles: to talk about more than _what_ I use but _why_.
-The decision making process will help future me and others hopefully.
+
 
 ## Setup
-
-All you have to do is this:
 
 ```sh
 cat tools/*.md | npx codedown sh | sh
 ```
+
+
+
+## What even is the goal?
+
+To be honest I probably do not know. I know that working with
+computers is what I love. Honestly I don't think I could live in a
+world without them. But also at the same time, there is so much to
+do in this world and I am so young...  I should be out there
+experiencing the world to my heart's content yet here I am just
+working to death. On one hand it is meaningless, but on the other;
+there just isn't anything else left worth doing other than working
+my ass off every day.
+
+Regardless of the choices or reasons I list out in this meaningless
+repository of my fallible-human-tendency-driven
+too-comfortable-to-change-anymore configuration bull-fuckery, it
+is a given that I will spend probably a decent chunk of my life
+screaming at these soulless, stupid-as-fuck machines. Might as well
+make it comfortable...
+
+Or productive, depending on who you ask. I'll probably choose the
+dumbest, simplest solution ever and then hype-sell it to the highest
+dumb-bidder up above in the economy chain for my own benefit like
+a psychopath with no honor or shame.  There is an abundance of those
+people I reckon yeah?
+
+Now that I've just read whatever the fuck I happened to spit out
+the previous minute, I have never seen truer words spoken WHAT THE
+FUCK MOM!!? WHO DID YOU BRING TO THIS GOD-FORSAKEN WORLD AM I A
+WIZARD??!?!!?
