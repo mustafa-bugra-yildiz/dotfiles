@@ -1,4 +1,4 @@
-# Why Sublime Text?
+# Why Neovim?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -67,14 +67,13 @@ That is, everything sucks. Use whatever.
 ## Setup
 
 ```sh
-command -v subl >/dev/null || {
-  echo "Installing sublime text."
-  brew install sublime-text
+command -v nvim >/dev/null || {
+  echo "Installing neovim."
+  brew install neovim
 }
 
-settings=~/Library/Application\ Support/Sublime\ Text/Packages/User
-[ ! -L "$settings" ] && {
-  echo "sync: sublime-text"
-  ln -sf $(pwd)/sublime-text "$settings"
+[ ! -L ~/.config/nvim ] && {
+  echo "sync: neovim"
+  ln -sf $(pwd)/nvim ~/.config/nvim
 }
 ```

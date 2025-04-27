@@ -1,7 +1,12 @@
 # user
 EMAIL='mustafa.bugra.yildiz@icloud.com'
 NAME='mustafa-bugra-yildiz'
-EDITOR='subl'
+
+# editor
+EDITOR='nvim'
+if test "$EDITOR" != vi; then
+  alias vi="$EDITOR"
+fi
 
 # omz
 ZSH="$HOME/.oh-my-zsh"
@@ -22,7 +27,7 @@ work() {
   }
 
   p=$(pick)
-  test "$p" != "" && cd ~/Desktop/$p && $EDITOR -a .
+  test "$p" != "" && cd ~/Desktop/$p && $EDITOR
 }
 
 # aliases
