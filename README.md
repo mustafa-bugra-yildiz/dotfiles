@@ -7,7 +7,7 @@ General:
 - [Brew](/tools/brew.md)
 
 Coding Related:
-- [Neovim](/tools/neovim.md)
+- [Visual Studio Code](/tools/visual-studio-code.md)
 - [ZSH](/tools/zsh.md)
 - [Git](/tools/git.md)
 

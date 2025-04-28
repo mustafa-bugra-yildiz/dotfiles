@@ -6,7 +6,7 @@
 	followTags = true
 	default = simple
 [core]
-	editor = nvim
+	editor = code -w
 [advice]
 	detachedHead = false
 [column]

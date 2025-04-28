@@ -1,4 +1,4 @@
-# Why Neovim?
+# Why Visual Studio Code?
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -67,13 +67,8 @@ That is, everything sucks. Use whatever.
 ## Setup
 
 ```sh
-command -v nvim >/dev/null || {
-  echo "Installing neovim."
-  brew install neovim
-}
-
-[ ! -L ~/.config/nvim ] && {
-  echo "sync: neovim"
-  ln -sf $(pwd)/nvim ~/.config/nvim
+command -v code >/dev/null || {
+  echo "Installing visual studio code."
+  brew install visual-studio-code
 }
 ```

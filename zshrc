@@ -3,8 +3,8 @@ EMAIL='mustafa.bugra.yildiz@icloud.com'
 NAME='mustafa-bugra-yildiz'
 
 # editor
-EDITOR='nvim'
-if test "$EDITOR" != vi; then
+EDITOR='code'
+if test "$EDITOR" = nvim; then
   alias vi="$EDITOR"
 fi
 
@@ -27,7 +27,7 @@ work() {
   }
 
   p=$(pick)
-  test "$p" != "" && cd ~/Desktop/$p && $EDITOR
+  test "$p" != "" && cd ~/Desktop/$p && $EDITOR -r .
 }
 
 # aliases
@@ -53,6 +53,7 @@ PATH="/opt/homebrew/opt/rsync/bin:$PATH"
 }
 
 # exports
+export EDITOR
 export EMAIL
 export NAME
 export PATH
