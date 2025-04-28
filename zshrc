@@ -27,7 +27,7 @@ work() {
   }
 
   p=$(pick)
-  test "$p" != "" && cd ~/Desktop/$p && $EDITOR -r .
+  test "$p" != "" && $EDITOR -r ~/Desktop/$p
 }
 
 # aliases
