@@ -1,4 +1,3 @@
-
 EMAIL='mustafa.bugra.yildiz@icloud.com'
 NAME='mustafa-bugra-yildiz'
 
@@ -10,7 +9,7 @@ fi
 
 # omz
 ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell" # set by `omz`
+ZSH_THEME="evan" # set by `omz`
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -22,7 +21,7 @@ proj() {
     grep -v 'node_modules'     | # Remove node_modules -_-
     sed 's/\/.git\/$//'        | # Truncate '/.git$' suffix
     sed 's/.*code\///'      | # Truncate '.*/Desktop/' prefix
-    fzf --preview='cat ~/code/{}/README.md' \
+    fzf --preview='cat ~/code/{}/README' \
         --preview-window=down
   }
 
