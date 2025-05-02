@@ -1,0 +1,19 @@
+Why Commit Mono?
+================
+
+I have never seen any other font that promotes conformancy with
+practicality as much as these guys do. It looks like every other
+tech font and isn't distinct at all.  Easy on the eyes, monospace,
+lacks a hype around it. Gets outta my way (son).
+
+Apparently nobody knows about it either, which is surprising
+considering that it really is a great font. I intend to keep it
+that way.
+
+
+Setup
+=====
+
+```sh
+brew install font-commit-mono
+```

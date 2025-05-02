@@ -1,4 +1,6 @@
-# Why Visual Studio Code?
+Why Vim?
+========
+
 Below, you will find an incomplete list of editors I have used:
 
 Old:
@@ -26,7 +28,10 @@ Stupid:
 
 Almost all them lacked something. My requirements were simple:
 
-## __Works OOTB__
+
+Works OOTB
+==========
+
 I couldn't care less about setting things up.
 
 Elimination:
@@ -37,14 +42,20 @@ Elimination:
 - Notepad++
 - Kakoune
 
-## __Simple UI__
+
+Simple UI
+=========
+
 I want it as complicated as I care.
 
 Elimination:
 - Visual Studio
 - JetBrains X
 
-## __Fast__
+
+Fast
+====
+
 On a good enough hardware this doesn't matter, but I am very sensitive
 to latency for some reason.
 
@@ -52,7 +63,10 @@ Elimination:
 - Visual Studio Code
 - Cursor
 
-## __Extensible__
+
+Extensible
+==========
+
 I need good extensions.
 
 Elimination:
@@ -60,15 +74,21 @@ Elimination:
 - Sublime Text 4
 - Zed
 
-## Conclusion
+
+Conclusion
+==========
+
 You may have noticed that after all this, I am left with nothing.
 That is, everything sucks. Use whatever.
 
-## Setup
+
+Setup
+=====
 
 ```sh
-command -v code >/dev/null || {
-  echo "Installing visual studio code."
-  brew install visual-studio-code
+[ ! -f ~/.vimrc ] && cp vimrc ~/.vimrc
+[   -f ~/.vimrc ] && {
+  echo "sync: vim"
+  cp ~/.vimrc vimrc
 }
 ```

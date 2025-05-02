@@ -1,32 +1,22 @@
-# Bugra's Configuration
+Bugra's Configuration
+=====================
 
-I use these:
-
-General:
-- [MacOS](/tools/macos.md)
-- [Brew](/tools/brew.md)
-
-Coding Related:
-- [Visual Studio Code](/tools/visual-studio-code.md)
-- [ZSH](/tools/zsh.md)
-- [Git](/tools/git.md)
-
-Tech:
-- [Go](/tools/go.md)
+Everything I use is detailed and available under "tools"
+Please don't ask me anymore.
 
 
+Setup
+=====
 
-## Setup
-
-Get [sitdown](https://github.com/mustafa-bugra-yildiz/sitdown).
+Get sitdown: https://github.com/mustafa-bugra-yildiz/sitdown
 
 ```sh
-sitdown <(cat tools/*.md) sh | sh
+sitdown <(cat tools/*) sh | sh
 ```
 
 
-
-## What even is the goal?
+What even is the goal?
+======================
 
 To be honest I probably do not know. I know that working with
 computers is what I love. Honestly I don't think I could live in a

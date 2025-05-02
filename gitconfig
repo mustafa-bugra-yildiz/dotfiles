@@ -6,7 +6,7 @@
 	followTags = true
 	default = simple
 [core]
-	editor = code -w
+	editor = vi
 [advice]
 	detachedHead = false
 [column]

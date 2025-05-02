@@ -1,4 +1,5 @@
-# Why Git?
+Why Git?
+========
 
 Everything else sucks. I tried:
 
@@ -6,10 +7,12 @@ Everything else sucks. I tried:
 - Mercurial
 - Darcs
 
-Jujutsu is a nice CLI for git. Mercurial is used nowhere except for Meta.
-So, git it is.
+Jujutsu is a nice CLI for git. Mercurial is used nowhere except for
+Meta.  So, git it is.
 
-## Setup
+
+Setup
+=====
 
 ```sh
 [ ! -f ~/.gitconfig ] && cp gitconfig ~/.gitconfig

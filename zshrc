@@ -1,9 +1,9 @@
-# user
+
 EMAIL='mustafa.bugra.yildiz@icloud.com'
 NAME='mustafa-bugra-yildiz'
 
 # editor
-EDITOR='code'
+EDITOR='vi'
 if test "$EDITOR" = nvim; then
   alias vi="$EDITOR"
 fi
@@ -15,19 +15,19 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # functions
-work() {
+proj() {
   pick() {
-    fd -H --type d .git ~/Desktop | # Every directory in ~/Desktop
-    grep '.git/$'                 | # Filter the ones with git repos
-    grep -v 'node_modules'        | # Remove node_modules -_-
-    sed 's/\/.git\/$//'           | # Truncate '/.git$' suffix
-    sed 's/.*Desktop\///'         | # Truncate '.*/Desktop/' prefix
-    fzf --preview='cat ~/Desktop/{}/README.md' \
+    fd -H --type d .git ~/code | # Every directory in ~/Desktop
+    grep '.git/$'              | # Filter the ones with git repos
+    grep -v 'node_modules'     | # Remove node_modules -_-
+    sed 's/\/.git\/$//'        | # Truncate '/.git$' suffix
+    sed 's/.*code\///'      | # Truncate '.*/Desktop/' prefix
+    fzf --preview='cat ~/code/{}/README.md' \
         --preview-window=down
   }
 
   p=$(pick)
-  test "$p" != "" && $EDITOR -r ~/Desktop/$p
+  test "$p" != "" && cd ~/code/$p
 }
 
 # aliases

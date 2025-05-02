@@ -1,10 +1,12 @@
-# Why ZSH?
+Why ZSH?
+========
 
-It comes with MacOS by default. I just slap [Oh My ZSH](https://ohmyz.sh) on it
+It comes with MacOS by default. I just slap https://ohmyz.sh on it
 and call it a day.
 
 
-# Setup
+Setup
+=====
 
 ```sh
 [ ! -f ~/.zshrc ] && cp zshrc ~/.zshrc
