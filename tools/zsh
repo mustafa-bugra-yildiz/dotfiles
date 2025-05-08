@@ -1,0 +1,26 @@
+Why ZSH?
+========
+
+It comes with MacOS by default. I just slap https://ohmyz.sh on it
+and call it a day.
+
+
+Setup
+=====
+
+```sh
+sitdown tools/zsh config > ~/.zshrc
+```
+
+```config
+# prompt
+PS1='%1~: '
+
+# go
+export PATH="$PATH:$HOME/go/bin"
+
+# homebrew
+[ -f /opt/homebrew/bin/brew ] && {
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+}
+```

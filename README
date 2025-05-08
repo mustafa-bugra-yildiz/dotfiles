@@ -11,7 +11,10 @@ Setup
 Get sitdown: https://github.com/mustafa-bugra-yildiz/sitdown
 
 ```sh
-sitdown <(cat tools/*) sh | sh
+for f in $(ls tools); do
+	echo " > setup tools/$f"
+	sitdown tools/$f sh | sh
+done
 ```
 
 

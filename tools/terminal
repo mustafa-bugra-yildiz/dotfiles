@@ -1,0 +1,25 @@
+Why Terminal.app?
+=================
+
+I have literally no reason to use anything else.
+And it isn't wrong to stick to defaults when they work.
+
+
+Setup
+=====
+
+Goal: Light background, soft colors, clean mono type.
+
+Settings:
+	1.	Open Terminal > Settings > Profiles
+	2.	Duplicate the Basic profile and name it Paperlike.
+
+Customize:
+	•	Background: #FAFAF7 (a soft, warm white)
+	•	Text: #2A2A2A
+	•	Font: Set to SF Mono, Berkeley Mono, or Menlo, 13pt–14pt, line height 1.1
+	•	Cursor: #D3B65A (soft mustard, optional for a playful touch), non-blinking line.
+	•	Selection: Very light grey #EFEFEA
+	•	Transparency: 0% (fully opaque, like a real sheet of paper)
+
+Save and set Paperlike as the default.

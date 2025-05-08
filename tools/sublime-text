@@ -1,0 +1,90 @@
+Why Sublime Text?
+=================
+
+It works.
+
+
+Setup
+=====
+
+```sh
+brew install sublime-text
+
+path="$HOME/Library/Application Support/Sublime Text/Packages/User"
+sitdown tools/sublime-text preferences > "$path/Preferences.sublime-settings"
+sitdown tools/sublime-text colorscheme > "$path/Paperlike.sublime-color-scheme"
+```
+
+```preferences
+{
+	// theme
+	"color_scheme": "Packages/User/Paperlike.sublime-color-scheme",
+	"theme": "Adaptive.sublime-theme",
+
+	// typography
+	"font_face": "SF Mono",
+	"font_size": 14,
+	"line_padding_top": 4,
+	"line_padding_bottom": 4,
+
+	// caret
+	"caret_style": "smooth",
+
+	// misc
+	"ignored_packages": ["Vintage"],
+	"index_files": true,
+	"scroll_past_end": true,
+	"word_wrap": true,
+}
+```
+
+```colorscheme
+{
+  "variables": {
+    "background": "#FAFAF7",
+    "foreground": "#2A2A2A",
+    "caret": "#D36E58",
+    "selection": "#EFEFEA",
+    "comment": "#7A7A7A",
+    "accent": "#D36E58"
+  },
+  "globals": {
+    "background": "var(background)",
+    "foreground": "var(foreground)",
+    "caret": "var(caret)",
+    "selection": "var(selection)",
+    "line_highlight": "#F5F5F1",
+    "gutter": "#F0F0EC",
+    "gutter_foreground": "#B0B0AA",
+    "selection_border": "#E0E0DC",
+    "inactive_selection": "#F0F0EC"
+  },
+  "rules": [
+    {
+      "scope": "comment",
+      "foreground": "var(comment)",
+      "font_style": "italic"
+    },
+    {
+      "scope": "keyword",
+      "foreground": "#D36E58"
+    },
+    {
+      "scope": "string",
+      "foreground": "#3E644F"
+    },
+    {
+      "scope": "variable",
+      "foreground": "var(accent)"
+    },
+    {
+      "scope": "constant.numeric",
+      "foreground": "var(accent)"
+    },
+    {
+      "scope": "entity.name.function",
+      "foreground": "var(accent)"
+    }
+  ]
+}
+```

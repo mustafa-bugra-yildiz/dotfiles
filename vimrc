@@ -1,1 +1,0 @@
-set splitright splitbelow

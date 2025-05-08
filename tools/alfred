@@ -1,0 +1,16 @@
+Why Alfred?
+===========
+
+Spotlight is too slow and is buggy right now.
+I've switched to alfred unwillingly.
+
+There is also raycast, but I found it slower than
+alfred so...
+
+
+Setup
+=====
+
+```sh
+brew install alfred
+```

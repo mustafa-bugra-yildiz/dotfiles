@@ -26,3 +26,10 @@ Setup
 =====
 
 I literally don't do anything. It works fine OOTB.
+
+BUT! Apparently this makes fonts look better.
+I haven't yet noticed, but we will see.
+
+```sh
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+```
